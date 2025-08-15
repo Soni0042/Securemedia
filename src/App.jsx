@@ -1,11 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; 
 import Navbar from "./components/Navbar";
+import ContactUs from "./pages/contact/ContactUs";
 
 
 
 // Import your page components
 import Home from "./pages/Home";
-// import AboutUs from "./pages/about/AboutUs";
+import AboutSAM from "./pages/about/AboutSAM";
 // import Services from "./pages/services/Services";
 // etc...
 
@@ -18,9 +19,9 @@ export default function App() {
       {/* Page Routes */}
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* Example extra route:
-        <Route path="/about" element={<AboutUs />} /> 
-        */}
+        <Route path="/about/AboutSAM" element={<AboutSAM />} />
+        <Route path="/contact" element={<ContactUs />} />
+
       </Routes>
     </Router>
   );

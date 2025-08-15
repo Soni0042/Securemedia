@@ -1,17 +1,19 @@
 import { Link } from "react-router-dom";
 import { FaChevronDown } from "react-icons/fa";
 
+
 export default function Navbar() {
   return (
-    <nav className="bg-white text-black px-6 py-4 flex items-center justify-between shadow"style={{ height: "90px" }}>
+    <nav className="bg-white text-black px-6 py-4 flex items-center justify-between shadow" style={{ height: "90px" }}>
       {/* Logo */}
       <div className="flex items-center">
         <Link to="/">
           <img
-        src="src/images/New Logo 1.png"
-        alt="Company Logo"
-        className="h-full max-h-12 object-contain"
-        style={{ maxHeight: "150px" }}/>
+            src="../src/images/New Logo 1.png"
+            alt="Company Logo"
+            className="h-full max-h-12 object-contain"
+            style={{ maxHeight: "150px" }}
+          />
         </Link>
       </div>
 
@@ -28,7 +30,7 @@ export default function Navbar() {
             About Us <FaChevronDown className="ml-1 text-xs" />
           </span>
           <ul className="absolute left-0 top-full w-48 bg-white border border-gray-200 hidden group-hover:block rounded shadow-lg z-50">
-            <li><Link to="/about/about-sam" className="block px-4 py-2 hover:bg-gray-100">About SAM</Link></li>
+            <li><Link to="/about/AboutSAM" className="block px-4 py-2 hover:bg-gray-100">About SAM</Link></li>
             <li><Link to="/about/mission" className="block px-4 py-2 hover:bg-gray-100">Mission</Link></li>
             <li><Link to="/about/vision" className="block px-4 py-2 hover:bg-gray-100">Vision</Link></li>
           </ul>
@@ -50,14 +52,10 @@ export default function Navbar() {
         </li>
 
         {/* Contact Us */}
-        <li className="relative group">
-          <span className="flex items-center hover:text-[#E53935] cursor-default select-none">
-            Contact Us <FaChevronDown className="ml-1 text-xs" />
-          </span>
-          <ul className="absolute left-0 top-full w-40 bg-white border border-gray-200 hidden group-hover:block rounded shadow-lg z-50">
-            <li><Link to="/contact/login" className="block px-4 py-2 hover:bg-gray-100">Login</Link></li>
-            <li><Link to="/contact/signup" className="block px-4 py-2 hover:bg-gray-100">Signup</Link></li>
-          </ul>
+        <li>
+          <Link to="/contact" className="flex items-center hover:text-[#E53935] transition-colors ">
+            Contact Us
+          </Link>
         </li>
 
         {/* Blog */}

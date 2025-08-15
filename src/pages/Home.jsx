@@ -244,7 +244,7 @@ export default function Home() {
           {/* Image */}
           <div className="flex justify-center">
             <img
-              src="src/images/Affiliate-Marketing-Blog-Graphics-01.jpg"
+              src="../src/images/Affiliate-Marketing-Blog-Graphics-01.jpg"
               alt="Why Secure Media"
               className="w-full h-auto rounded-2xl"
             />
@@ -280,25 +280,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= TESTIMONIALS ================= */}
-      <section className="bg-white py-20 px-6 md:px-20">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Testimonials</h2>
-          <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
-            Our success, echoed by our clients. Unfiltered feedback and true testament to our service quality.
-          </p>
-
+    {/* Testimonials */}
+      <section className="bg-gray-50 py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-10">Testimonials</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { name: "Rajat Sharma", text: `"I recently partnered with Secure Affiliate Media for digital marketing services, and I couldn't be more impressed. From day one, their team has been incredibly professional, responsive, and results-driven. They took the time to understand my business goals and crafted a customized strategy that truly delivered."` },
-              { name: "Rohit Choudhary", text: `"Secure Affiliate Media did a fantastic job with our Google Ads and Facebook Ads, delivering great leads and ROI. Professional, responsive, and strategic — highly recommend them for anyone serious about growing their business."` },
-              { name: "Jahid Ali", text: `"This agency expertly handled our Google Ads, Facebook Ads, and social media marketing. Their strategic approach boosted engagement, brand visibility, and quality leads. Professional, responsive, and results-driven — highly recommend for business growth!"` }
-            ].map((testimonial, idx) => (
-              <div key={idx} className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition-shadow">
-                <p className="text-gray-700 italic mb-6">{testimonial.text}</p>
-                <div className="flex items-center justify-center">
-                  <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
-                </div>
+              {
+                name: "Rajat Sharma",
+                text: "I recently partnered with Secure Affiliate Media for digital marketing services, and I couldn't be more impressed. From day one, their team has been incredibly professional, responsive, and results-driven. They took the time to understand my business goals and crafted a customized strategy that truly delivered."
+              },
+              {
+                name: "Rohit Choudhary",
+                text: "Secure Affiliate Media did a fantastic job with our Google Ads and Facebook Ads, delivering great leads and ROI. Professional, responsive, and strategic highly recommend them for anyone serious about growing their business."
+              },
+              {
+                name: "Jahid Ali",
+                text: "This Agency expertly handled our Google Ads, Facebook Ads, and social media marketing. Their strategic approach boosted engagement, brand visibility, and quality leads. Professional, responsive, and results-driven highly recommend for business growth!"
+              }
+            ].map((t, i) => (
+              <div key={i} className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+                <p className="text-gray-700 mb-4">"{t.text}"</p>
+                <h4 className="font-bold text-red-600">{t.name}</h4>
+                <p className="text-sm text-gray-500">{t.company}</p>
               </div>
             ))}
           </div>

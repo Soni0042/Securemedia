@@ -10,7 +10,7 @@ export default function Footer() {
         {/* Logo Section */}
         <div className="flex flex-col items-center md:items-start">
           <img
-            src="src/images/New Logo 1.png" // replace with your logo path
+            src="../src/images/New Logo 1.png" // replace with your logo path
             alt="The Secure Media Logo"
             className="w-auto max-h-28 object-contain mb-4" // bigger but controlled
           />
