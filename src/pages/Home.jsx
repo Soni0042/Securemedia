@@ -1,206 +1,216 @@
+import { motion } from "framer-motion";
+import { FaGamepad, FaShoppingCart, FaPlane, FaHome, FaMoneyBillWave, FaLeaf } from "react-icons/fa";
 import NumbersMatter from "../components/NumbersMatter";
 import Footer from "../components/Footer";
 
 export default function Home() {
+  // Animation Variants
+  const fadeUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+  };
+
   return (
-    <div className="bg-white text-black font-sans min-h-screen">
+    <div className="bg-white text-black font-sans min-h-screen leading-relaxed">
 
-      {/* ================= HERO SECTION ================= */}
-      <section className="relative min-h-[80vh] flex flex-col md:flex-row items-center justify-center px-6 sm:px-10 md:px-20 lg:px-32 gap-10">
-        
-        {/* Left: Text */}
-        <div className="flex-1 text-center md:text-left">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight mb-6 uppercase tracking-tight">
-            Performance <span className="text-[#E53935]">Marketing</span> Company
-          </h1>
-          <p className="text-base sm:text-lg md:text-2xl mb-8 max-w-xl mx-auto md:mx-0 font-light">
-            Unleash your performance with{" "}
-            <strong className="text-[#E53935]">Secure Affiliate Media</strong>.
-          </p>
-          <hr className="border-t-4 border-gray-300 w-28 mx-auto md:mx-0 mb-8 opacity-60" />
-          <p className="uppercase text-xs sm:text-sm tracking-widest text-gray-500">
-            _______Estb. 2019_______
-          </p>
-        </div>
+     {/* ================= HERO ================= */}
+<section className="relative min-h-[80vh] flex flex-col md:flex-row items-center justify-between px-6 sm:px-10 md:px-20 lg:px-32 gap-12">
+  
+  {/* Left: Text */}
+  <motion.div
+    className="flex-1 text-center md:text-left"
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+  >
+    <motion.h1
+      className="text-5xl sm:text-6xl md:text-7xl font-extrabold uppercase tracking-tight text-gray-900 leading-tight mb-6"
+      variants={fadeUp}
+    >
+      Performance <span className="text-[#E53935]">Marketing</span> Company
+    </motion.h1>
 
-        {/* Right: Hero Image */}
-        <div className="flex-1 flex justify-center">
-          <img
-            src="/src/images/pm.png"
-            alt="Performance Marketing"
-            className="w-full max-w-md object-contain"
-          />
+    <motion.p
+      className="text-lg md:text-xl font-light text-gray-700 mb-8 max-w-xl mx-auto md:mx-0"
+      variants={fadeUp}
+      transition={{ delay: 0.2 }}
+    >
+      Unleash your performance with <strong className="text-[#E53935] font-semibold">Secure Affiliate Media</strong>.
+    </motion.p>
+
+    <motion.div
+      className="flex items-center justify-center md:justify-start mb-8"
+      variants={fadeUp}
+      transition={{ delay: 0.4 }}
+    >
+      <hr className="border-t-4 border-gray-300 w-24 opacity-60 mr-4" />
+      <span className="uppercase text-xs sm:text-sm tracking-widest text-gray-500">
+        Estb. 2019
+      </span>
+    </motion.div>
+
+    <motion.div
+      className="flex justify-center md:justify-start gap-4"
+      variants={fadeUp}
+      transition={{ delay: 0.6 }}
+    >
+      <button className="bg-[#E53935] text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-red-600 transition">
+        Get Started
+      </button>
+      <button className="border border-gray-300 text-gray-700 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition">
+        Learn More
+      </button>
+    </motion.div>
+  </motion.div>
+
+  {/* Right: Hero Image */}
+  <motion.div
+    className="flex-1 flex justify-center mt-10 md:mt-0"
+    initial={{ opacity: 0, x: 100 }}
+    whileInView={{ opacity: 1, x: 0, transition: { duration: 1, ease: "easeOut" } }}
+    viewport={{ once: true }}
+  >
+    <motion.img
+      src="/src/images/pm.png"
+      alt="Performance Marketing"
+      className="w-full max-w-md object-contain"
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.3 }}
+    />
+  </motion.div>
+</section>
+
+
+      {/* ================= VALUE PROPOSITIONS ================= */}
+      <section className="bg-white py-20">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold text-gray-900 mb-6 tracking-tight">Why Partner With Us</h2>
+          <p className="text-lg md:text-xl text-gray-600 mb-12">
+            Our solutions are designed to deliver measurable results and sustainable growth for your business.
+          </p>
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                num: "01",
+                title: "Revenue-Driven Partnerships",
+                desc: "We focus on strategies that consistently improve revenue and maximize ROI.",
+                color: "bg-red-100 text-red-600"
+              },
+              {
+                num: "02",
+                title: "Accurate Audience Targeting",
+                desc: "Reach your ideal customers with precision and data-driven targeting strategies.",
+                color: "bg-blue-100 text-blue-600"
+              },
+              {
+                num: "03",
+                title: "Maximized Conversion Funnels",
+                desc: "Optimized funnels designed to turn prospects into loyal customers effectively.",
+                color: "bg-green-100 text-green-600"
+              },
+              {
+                num: "04",
+                title: "Scalable Performance Solutions",
+                desc: "Solutions built to grow and adapt with your business needs.",
+                color: "bg-yellow-100 text-yellow-600"
+              },
+              {
+                num: "05",
+                title: "Transparent & Measurable ROI",
+                desc: "Clear reporting ensures every marketing action is measurable and accountable.",
+                color: "bg-purple-100 text-purple-600"
+              },
+              {
+                num: "06",
+                title: "Innovation-Driven Strategies",
+                desc: "Leveraging the latest tools and creative approaches to stay ahead in your industry.",
+                color: "bg-pink-100 text-pink-600"
+              }
+            ].map((item, i) => (
+              <div key={i} className="flex flex-col items-center text-center p-6 hover:shadow-lg transition rounded-xl bg-white">
+                <div className={`w-16 h-16 ${item.color} flex items-center justify-center rounded-full mb-4 text-2xl font-bold`}>
+                  {item.num}
+                </div>
+                <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2 tracking-tight">
+                  {item.title}
+                </h3>
+                <p className="text-base sm:text-lg text-gray-600">{item.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* ================= FEATURES SECTION ================= */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8">
-          {[
-            {
-              title: "Omni-Channel Strategy & Growth",
-              icon: (
-                <>
-                  <path strokeLinecap="round" d="M5 8v12M12 4v16M19 12v8" />
-                  <path strokeLinecap="round" d="M2 8l3-3 3 3M9 4l3-3 3 3M16 12l3-3 3 3" />
-                </>
-              )
-            },
-            {
-              title: "CTR Optimized Digital Ads",
-              icon: (
-                <>
-                  <circle cx="12" cy="12" r="10" />
-                  <circle cx="12" cy="12" r="6" />
-                  <circle cx="12" cy="12" r="2" fill="#FFD600" />
-                </>
-              )
-            },
-            {
-              title: "Multi-type Conversion Rate Optimization",
-              icon: <path d="M3 4h18l-7 9v5l-4 2v-7l-7-9z" />
-            },
-            {
-              title: "Agile Performance",
-              icon: (
-                <>
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M12 12l4-4M12 2v2M2 12h2M12 22v-2M22 12h-2" />
-                </>
-              )
-            },
-            {
-              title: "AI & Data Driven Results",
-              icon: (
-                <>
-                  <rect x="4" y="4" width="16" height="16" rx="2" />
-                  <circle cx="12" cy="12" r="4" />
-                  <path d="M2 12h2M20 12h2M12 2v2M12 20v2" />
-                </>
-              )
-            }
-          ].map((feature, idx) => (
-            <div
-              key={idx}
-              className="flex flex-col items-center bg-[#d42027] rounded-xl p-6 text-center shadow-xl hover:scale-105 transition-transform"
-            >
-              <svg
-                className="w-10 h-10 mb-4 text-[#FFD600]"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-              >
-                {feature.icon}
-              </svg>
-              <h3 className="font-semibold text-lg mb-2 text-white">{feature.title}</h3>
+      {/* ================= TOP VERTICALS ================= */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold text-gray-800 mb-4 tracking-tight">Our Top Verticals</h2>
+          <p className="text-lg md:text-xl text-gray-600 mb-10">
+            We Generate Millions In These Verticals
+          </p>
+          <p className="text-gray-500 mb-12 text-base">We are always working towards offering meaningful marketing through:</p>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-10">
+            <div className="flex flex-col items-center">
+              <FaGamepad className="text-5xl text-blue-600 mb-4" />
+              <h3 className="text-lg font-semibold text-gray-900 tracking-tight">iGaming</h3>
             </div>
-          ))}
+            <div className="flex flex-col items-center">
+              <FaShoppingCart className="text-5xl text-green-600 mb-4" />
+              <h3 className="text-lg font-semibold text-gray-900 tracking-tight">E-Commerce</h3>
+            </div>
+            <div className="flex flex-col items-center">
+              <FaPlane className="text-5xl text-red-500 mb-4" />
+              <h3 className="text-lg font-semibold text-gray-900 tracking-tight">Travel</h3>
+            </div>
+            <div className="flex flex-col items-center">
+              <FaHome className="text-5xl text-indigo-500 mb-4" />
+              <h3 className="text-lg font-semibold text-gray-900 tracking-tight">Home Improvement</h3>
+            </div>
+            <div className="flex flex-col items-center">
+              <FaMoneyBillWave className="text-5xl text-yellow-500 mb-4" />
+              <h3 className="text-lg font-semibold text-gray-900 tracking-tight">Debt</h3>
+            </div>
+            <div className="flex flex-col items-center">
+              <FaLeaf className="text-5xl text-teal-500 mb-4" />
+              <h3 className="text-lg font-semibold text-gray-900 tracking-tight">Nutra</h3>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* ================= TOP VERTICALS AUTO-SCROLL ================= */}
-      <div className="bg-gradient-to-r from-red-900 to-red-600 text-white">
-        <section className="w-full py-16 px-6 md:px-20 overflow-hidden">
-          
-          {/* Heading */}
-          <div className="max-w-4xl mx-auto text-center md:text-left mb-10">
-            <p className="text-yellow-400 font-semibold uppercase tracking-widest">
-              Our Top Verticals
-            </p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mt-2">
-              We Generate <span className="text-white">Millions</span> <br />
-              In These Verticals
-            </h2>
-            <p className="mt-4 text-gray-200 max-w-2xl">
-              We are always working towards offering meaningful marketing through:
-            </p>
-          </div>
-
-          {/* Marquee */}
-          <div className="relative w-full overflow-hidden">
-            <div className="flex animate-marquee whitespace-nowrap">
-              {[
-                "Igaming",
-                "E-Commerce",
-                "Travel",
-                "Home Improvement",
-                "Debt",
-                "Nutra"
-              ].map((item, idx) => (
-                <span
-                  key={idx}
-                  className="mx-8 text-xl sm:text-2xl font-bold tracking-wide"
-                >
-                  {item}
-                </span>
-              ))}
-              {[
-                "Igaming",
-                "E-Commerce",
-                "Travel",
-                "Home Improvement",
-                "Debt",
-                "Nutra"
-              ].map((item, idx) => (
-                <span
-                  key={`dup-${idx}`}
-                  className="mx-8 text-xl sm:text-2xl font-bold tracking-wide"
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
-          </div>
-        </section>
-      </div>
-
-      {/* ================= NUMBERS MATTER SECTION ================= */}
+      {/* ================= NUMBERS MATTER ================= */}
       <NumbersMatter />
 
-      {/* ================= FOUNDERS SECTION ================= */}
+      {/* ================= FOUNDERS ================= */}
       <section className="bg-gray-50 py-20 px-6 md:px-20">
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
+        <h2 className="text-4xl font-bold text-center text-gray-900 mb-12 tracking-tight">
           Meet Our Founders
         </h2>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Himanshu Singh */}
-          <div className="bg-white shadow-lg rounded-2xl p-8 flex flex-col items-center text-center hover:shadow-xl transition-shadow">
+          {/* Himanshu */}
+          <div className="bg-white shadow-lg rounded-2xl p-8 flex flex-col items-center text-center hover:shadow-xl transition">
             <img
               src="https://thesecuremedia.com/wp-content/uploads/2025/04/Untitled-1600-x-1068-px-1024x684.png"
               alt="Himanshu Singh"
               className="w-32 h-32 rounded-full object-cover"
             />
-            <h3 className="mt-6 text-2xl font-semibold text-gray-800">Himanshu Singh</h3>
+            <h3 className="mt-6 text-2xl font-bold text-gray-900 tracking-tight">Himanshu Singh</h3>
             <p className="text-red-600 font-medium">CEO of Secure Affiliate Media</p>
-            <p className="mt-4 text-gray-600 leading-relaxed text-sm">
-              Himanshu has a compelling vision for performance marketing influenced by his early
-              days in the affiliate sector. With six months of direct CPL delivery experience, he
-              gained an excellent grip on lead generation dynamics. This expertise fueled the
-              creation of Secure Affiliate Media, initially dominating the domestic CPL space.
-              Under his leadership, the company achieved massive growth in under three years,
-              built a strong international presence, and expanded into new performance marketing
-              verticals.
+            <p className="mt-4 text-gray-600 leading-relaxed text-base">
+              Himanshu has a compelling vision for performance marketing influenced by his early days in the affiliate sector. With six months of direct CPL delivery experience, he gained an excellent grip on lead generation dynamics. This expertise fueled the creation of Secure Affiliate Media, initially dominating the domestic CPL space. Under his leadership, the company achieved massive growth in under three years, built a strong international presence, and expanded into new performance marketing verticals.
             </p>
           </div>
-
-          {/* Alok Singh */}
-          <div className="bg-white shadow-lg rounded-2xl p-8 flex flex-col items-center text-center hover:shadow-xl transition-shadow">
+          {/* Alok */}
+          <div className="bg-white shadow-lg rounded-2xl p-8 flex flex-col items-center text-center hover:shadow-xl transition">
             <img
               src="src/images/Screenshot 2025-08-14 141743.png"
               alt="Alok Singh"
               className="w-32 h-32 rounded-full object-cover"
             />
-            <h3 className="mt-6 text-2xl font-semibold text-gray-800">Alok Singh</h3>
+            <h3 className="mt-6 text-2xl font-bold text-gray-900 tracking-tight">Alok Singh</h3>
             <p className="text-red-600 font-medium">Global Business Director</p>
-            <p className="mt-4 text-gray-600 leading-relaxed text-sm">
-              As Global Business Director, Alok drives Secure Affiliate Media’s global strategy
-              and expansion. From starting as a finance executive at ADMS & Co. to working as a Tax
-              Auditor at a Big 4 firm, his career took a pivotal turn in 2022 when he joined the
-              company. His passion for the affiliate market and exceptional business development
-              skills have broadened the company’s global footprint and secured major international
-              partnerships.
+            <p className="mt-4 text-gray-600 leading-relaxed text-base">
+              As Global Business Director, Alok drives Secure Affiliate Media’s global strategy and expansion. From starting as a finance executive at ADMS & Co. to working as a Tax Auditor at a Big 4 firm, his career took a pivotal turn in 2022 when he joined the company. His passion for the affiliate market and exceptional business development skills have broadened the company’s global footprint and secured major international partnerships.
             </p>
           </div>
         </div>
@@ -211,36 +221,25 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Text */}
           <div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Secure Media?</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6 tracking-tight">Why Secure Media?</h2>
             <p className="text-gray-600 text-lg leading-relaxed mb-10">
-              At Secure Affiliate Media, your success is our success. We are different due to our highly trained
-              and deeply skilled staff. Our experts aren't only smart; they've worked hard for years mastering
-              the art of affiliate and performance marketing industry. All this experience manifests itself in a
-              tangible real-time return that stands on its own merit. We're not speaking about potential; we're
-              about delivering tangible, measurable results that inspire real growth for our partners.
+              At Secure Affiliate Media, your success is our success. We are different due to our highly trained and deeply skilled staff. Our experts aren't only smart; they've worked hard for years mastering the art of affiliate and performance marketing industry. All this experience manifests itself in a tangible real-time return that stands on its own merit. We're not speaking about potential; we're about delivering tangible, measurable results that inspire real growth for our partners.
             </p>
-
-            {/* Mission & Vision */}
             <div className="space-y-8">
-              <div className="bg-gray-50 rounded-xl p-6 shadow hover:shadow-lg transition-shadow">
-                <h3 className="text-2xl font-semibold text-green-600 mb-3">Mission</h3>
+              <div className="bg-gray-50 rounded-xl p-6 shadow hover:shadow-lg transition">
+                <h3 className="text-2xl font-bold text-green-600 mb-3 tracking-tight">Mission</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  To enable companies with the strategic knowledge of our highly skilled team, providing
-                  outstanding real-time outcomes in affiliate and performance marketing that promote
-                  sustainable growth and accomplish their specific goals.
+                  To enable companies with the strategic knowledge of our highly skilled team, providing outstanding real-time outcomes in affiliate and performance marketing that promote sustainable growth and accomplish their specific goals.
                 </p>
               </div>
-              <div className="bg-gray-50 rounded-xl p-6 shadow hover:shadow-lg transition-shadow">
-                <h3 className="text-2xl font-semibold text-blue-600 mb-3">Vision</h3>
+              <div className="bg-gray-50 rounded-xl p-6 shadow hover:shadow-lg transition">
+                <h3 className="text-2xl font-bold text-blue-600 mb-3 tracking-tight">Vision</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  To create long-term relationships with companies around the globe, to become their go-to
-                  partner in reaching their marketing goals by continuously strengthening our extremely
-                  talented team and our commitment to provide better real-time results.
+                  To create long-term relationships with companies around the globe, to become their go-to partner in reaching their marketing goals by continuously strengthening our extremely talented team and our commitment to provide better real-time results.
                 </p>
               </div>
             </div>
           </div>
-
           {/* Image */}
           <div className="flex justify-center">
             <img
@@ -255,11 +254,10 @@ export default function Home() {
       {/* ================= CORE STRENGTHS ================= */}
       <section className="bg-gray-50 py-20 px-6 md:px-20">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Core Strengths</h2>
-          <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4 tracking-tight">Our Core Strengths</h2>
+          <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
             At Secure Affiliate Media, we pride ourselves on the values and capabilities that set us apart in the performance marketing industry.
           </p>
-
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { number: 1, title: "Experienced Team", color: "green" },
@@ -273,17 +271,17 @@ export default function Home() {
                 <div className={`flex items-center justify-center w-14 h-14 bg-${item.color}-100 text-${item.color}-600 rounded-full mx-auto mb-4 text-2xl font-bold`}>
                   {item.number}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 tracking-tight">{item.title}</h3>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-    {/* Testimonials */}
+      {/* ================= TESTIMONIALS ================= */}
       <section className="bg-gray-50 py-16">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-10">Testimonials</h2>
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-10 tracking-tight">Testimonials</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -292,17 +290,16 @@ export default function Home() {
               },
               {
                 name: "Rohit Choudhary",
-                text: "Secure Affiliate Media did a fantastic job with our Google Ads and Facebook Ads, delivering great leads and ROI. Professional, responsive, and strategic highly recommend them for anyone serious about growing their business."
+                text: "Secure Affiliate Media did a fantastic job with our Google Ads and Facebook Ads, delivering great leads and ROI. Professional, responsive, and strategic – highly recommend them for anyone serious about growing their business."
               },
               {
                 name: "Jahid Ali",
-                text: "This Agency expertly handled our Google Ads, Facebook Ads, and social media marketing. Their strategic approach boosted engagement, brand visibility, and quality leads. Professional, responsive, and results-driven highly recommend for business growth!"
+                text: "This agency expertly handled our Google Ads, Facebook Ads, and social media marketing. Their strategic approach boosted engagement, brand visibility, and quality leads. Professional, responsive, and results-driven – highly recommend for business growth!"
               }
             ].map((t, i) => (
               <div key={i} className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
                 <p className="text-gray-700 mb-4">"{t.text}"</p>
-                <h4 className="font-bold text-red-600">{t.name}</h4>
-                <p className="text-sm text-gray-500">{t.company}</p>
+                <h4 className="font-bold text-[#E53935]">{t.name}</h4>
               </div>
             ))}
           </div>
@@ -311,7 +308,6 @@ export default function Home() {
 
       {/* ================= FOOTER ================= */}
       <Footer />
-
     </div>
   );
 }

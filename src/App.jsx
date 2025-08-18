@@ -7,6 +7,9 @@ import ContactUs from "./pages/contact/ContactUs";
 // Import your page components
 import Home from "./pages/Home";
 import AboutSAM from "./pages/about/AboutSAM";
+import InHouse from "./pages/gallery/InHouse";
+import Event from "./pages/gallery/Event";
+
 // import Services from "./pages/services/Services";
 // etc...
 
@@ -21,6 +24,10 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about/AboutSAM" element={<AboutSAM />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/gallery/in-house" element={<InHouse />} />
+        <Route path="/gallery/Event" element={<Event />} />
+
+        
 
       </Routes>
     </Router>
