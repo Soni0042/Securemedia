@@ -44,11 +44,15 @@ export default function NumbersMatter() {
                   separator=","
                   enableScrollSpy
                   scrollSpyOnce
-                  formattingFn={
-                    label === "Monthly Conversion" ? formatMillions : undefined
-                  }
-                />
-                {suffix}
+                  formattingFn={label === "Monthly Conversion" ? formatMillions : undefined}
+                >
+                  {({ countUpRef }) => (
+                    <>
+                      <span ref={countUpRef} />
+                      {suffix}
+                    </>
+                  )}
+                </CountUp>
               </p>
               <p className="uppercase tracking-widest text-sm font-semibold text-gray-600">
                 {label}
