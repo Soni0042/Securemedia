@@ -35,7 +35,7 @@ const Event = () => {
           GLOBAL EVENTS
         </h2>
         <p className="text-gray-500 text-sm md:text-base">
-          Making waves worldwide: See vCommission in action at global events
+          Making waves worldwide: See Secure Media in action at global events
         </p>
       </section>
 
