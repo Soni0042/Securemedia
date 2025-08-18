@@ -190,7 +190,7 @@ export default function Home() {
           {/* Himanshu */}
           <div className="bg-white shadow-lg rounded-2xl p-8 flex flex-col items-center text-center hover:shadow-xl transition">
             <img
-              src="https://thesecuremedia.com/wp-content/uploads/2025/04/Untitled-1600-x-1068-px-1024x684.png"
+              src="/him.png"
               alt="Himanshu Singh"
               className="w-32 h-32 rounded-full object-cover"
             />
@@ -203,7 +203,7 @@ export default function Home() {
           {/* Alok */}
           <div className="bg-white shadow-lg rounded-2xl p-8 flex flex-col items-center text-center hover:shadow-xl transition">
             <img
-              src="src/images/Screenshot 2025-08-14 141743.png"
+              src="/alok.jpeg"
               alt="Alok Singh"
               className="w-32 h-32 rounded-full object-cover"
             />
