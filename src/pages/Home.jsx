@@ -243,7 +243,7 @@ export default function Home() {
           {/* Image */}
           <div className="flex justify-center">
             <img
-              src="../src/images/Affiliate-Marketing-Blog-Graphics-01.jpg"
+              src="/Affiliate-Marketing-Blog-Graphics-01.jpg"
               alt="Why Secure Media"
               className="w-full h-auto rounded-2xl"
             />
