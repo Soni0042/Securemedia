@@ -9,6 +9,8 @@ import Home from "./pages/Home";
 import AboutSAM from "./pages/about/AboutSAM";
 import InHouse from "./pages/gallery/InHouse";
 import Event from "./pages/gallery/Event";
+import Affiliate from "./pages/services/AffiliateMarketing";
+import PerformanceMarketing from "./pages/services/PerformanceMarketing";
 
 // import Services from "./pages/services/Services";
 // etc...
@@ -26,6 +28,9 @@ export default function App() {
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/gallery/in-house" element={<InHouse />} />
         <Route path="/gallery/Event" element={<Event />} />
+        <Route path="/services/affiliate-marketing" element={<Affiliate/>} />
+        <Route path="/services/performance-marketing" element={<PerformanceMarketing/>} />
+        
 
         
 
