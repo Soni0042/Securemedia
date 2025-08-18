@@ -71,7 +71,7 @@ export default function Home() {
     viewport={{ once: true }}
   >
     <motion.img
-      src="/src/images/pm.png"
+      src="/pm.png"
       alt="Performance Marketing"
       className="w-full max-w-md object-contain"
       whileHover={{ scale: 1.05 }}
