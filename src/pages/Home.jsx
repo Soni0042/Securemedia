@@ -24,7 +24,7 @@ export default function Home() {
     viewport={{ once: true }}
   >
     <motion.h1
-      className="text-5xl sm:text-6xl md:text-7xl font-extrabold uppercase tracking-tight text-gray-900 leading-tight mb-6"
+      className="text-5xl sm:text-6xl md:text-7xl font- uppercase tracking-tight text-black leading-tight mb-6"
       variants={fadeUp}
     >
       Performance <span className="text-[#E53935]">Marketing</span> Company

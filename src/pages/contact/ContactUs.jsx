@@ -92,95 +92,94 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Contact Form */}
       <section className="py-16">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
-            Send Us a Message
-          </h2>
-          <form className="bg-white p-8 rounded-xl shadow-lg space-y-6">
-            {/* Name Fields */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-gray-700 font-medium mb-2">
-                  First Name
-                </label>
-                <input
-                  type="text"
-                  placeholder="Enter your first name"
-                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-red-600"
-                />
-              </div>
-              <div>
-                <label className="block text-gray-700 font-medium mb-2">
-                  Last Name
-                </label>
-                <input
-                  type="text"
-                  placeholder="Enter your last name"
-                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-red-600"
-                />
-              </div>
-            </div>
-
-            {/* Email */}
-            <div>
-              <label className="block text-gray-700 font-medium mb-2">
-                Email Address
-              </label>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-red-600"
-              />
-            </div>
-
-            {/* Phone */}
-            <div>
-              <label className="block text-gray-700 font-medium mb-2">
-                Phone Number
-              </label>
-              <input
-                type="tel"
-                placeholder="Enter your phone number"
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-red-600"
-              />
-            </div>
-
-            {/* Subject */}
-            <div>
-              <label className="block text-gray-700 font-medium mb-2">
-                Subject
-              </label>
-              <input
-                type="text"
-                placeholder="Enter subject"
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-red-600"
-              />
-            </div>
-
-            {/* Message */}
-            <div>
-              <label className="block text-gray-700 font-medium mb-2">
-                Message
-              </label>
-              <textarea
-                rows="5"
-                placeholder="Write your message..."
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-red-600"
-              ></textarea>
-            </div>
-
-            {/* Submit Button */}
-            <button
-              type="submit"
-              className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium transition w-full"
-            >
-              Send Message
-            </button>
-          </form>
+  <div className="max-w-4xl mx-auto px-6">
+    <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
+      Send Us a Message
+    </h2>
+    <form className="bg-white p-8 rounded-xl shadow-lg space-y-6">
+      {/* Name Fields */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label className="block text-gray-700 font-medium mb-2">
+            First Name
+          </label>
+          <input
+            type="text"
+            placeholder="Enter your first name"
+            className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-red-600"
+          />
         </div>
-      </section>
+        <div>
+          <label className="block text-gray-700 font-medium mb-2">
+            Last Name
+          </label>
+          <input
+            type="text"
+            placeholder="Enter your last name"
+            className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-red-600"
+          />
+        </div>
+      </div>
+
+      {/* Email & Phone */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label className="block text-gray-700 font-medium mb-2">
+            Email Address
+          </label>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-red-600"
+          />
+        </div>
+        <div>
+          <label className="block text-gray-700 font-medium mb-2">
+            Phone Number
+          </label>
+          <input
+            type="tel"
+            placeholder="Enter your phone number"
+            className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-red-600"
+          />
+        </div>
+      </div>
+
+      {/* Subject */}
+      <div>
+        <label className="block text-gray-700 font-medium mb-2">
+          Subject
+        </label>
+        <input
+          type="text"
+          placeholder="Enter subject"
+          className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-red-600"
+        />
+      </div>
+
+      {/* Message */}
+      <div>
+        <label className="block text-gray-700 font-medium mb-2">
+          Message
+        </label>
+        <textarea
+          rows="5"
+          placeholder="Write your message..."
+          className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-red-600"
+        ></textarea>
+      </div>
+
+      {/* Submit Button */}
+      <button
+        type="submit"
+        className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium transition w-full"
+      >
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
 
       {/* Footer */}
       <Footer />
