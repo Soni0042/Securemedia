@@ -9,7 +9,7 @@ export default function Navbar() {
       <div className="flex items-center">
         <Link to="/">
           <img
-            src="/images/New Logo 1.png"
+            src="/New Logo 1.png"
             alt="Company Logo"
             className="h-full max-h-12 object-contain"
             style={{ maxHeight: "150px" }}

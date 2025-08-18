@@ -4,18 +4,18 @@ import Footer from "../../components/Footer";
 const InHouse = () => {
   // Array of 12 images (replace with actual image paths)
   const images = [
-    "/images/inhouse (1).png",
-    "/images/inhouse (2).png",
-    "/images/inhouse (3).png",
-    "/images/inhouse (4).png",
-    "/images/inhouse (5).png",
-    "/images/inhouse (6).png",
-    "/images/inhouse (7).png",
-    "/images/inhouse (8).png",
-    "/images/inhouse (9).png",
-    "/images/inhouse (10).png",
-    "/images/inhouse (11).png",
-    "/images/inhouse (12).png",
+    "/inhouse (1).png",
+    "/inhouse (2).png",
+    "/inhouse (3).png",
+    "/inhouse (4).png",
+    "/inhouse (5).png",
+    "/inhouse (6).png",
+    "/inhouse (7).png",
+    "/inhouse (8).png",
+    "/inhouse (9).png",
+    "/inhouse (10).png",
+    "/inhouse (11).png",
+    "/inhouse (12).png",
   ];
 
   return (

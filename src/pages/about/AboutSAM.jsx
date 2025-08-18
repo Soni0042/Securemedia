@@ -11,7 +11,7 @@ export default function AboutSAM() {
       <section className="relative bg-gradient-to-r from-red-800 to-red-600 text-white py-20">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <motion.img
-            src="/images/abus.png"
+            src="/abus.png"
             alt="Secure Affiliate Media"
             className="mx-auto w-80 mb-6"
             initial={{ opacity: 0, y: -20 }}

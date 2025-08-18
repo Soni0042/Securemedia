@@ -4,18 +4,18 @@ import Footer from "../../components/Footer";
 const Event = () => {
   // Array of images for global events
   const images = [
-    "/images/event (1).jpeg",
-    "/images/event (2).jpeg",
-    "/images/event (3).jpeg",
-    "/images/event (4).jpeg",
-    "/images/event (5).jpeg",
-    "/images/event (6).jpeg",
-    "/images/event (7).jpeg",
-    "/images/event (8).jpeg",
-    "/images/event (9).jpeg",
-    "/images/event (10).jpeg",
-    "/images/event (11).jpeg",
-    "/images/event (12).jpeg",
+    "/event (1).jpeg",
+    "/event (2).jpeg",
+    "/event (3).jpeg",
+    "/event (4).jpeg",
+    "/event (5).jpeg",
+    "/event (6).jpeg",
+    "/event (7).jpeg",
+    "/event (8).jpeg",
+    "/event (9).jpeg",
+    "/event (10).jpeg",
+    "/event (11).jpeg",
+    "/event (12).jpeg",
   ];
 
   return (
