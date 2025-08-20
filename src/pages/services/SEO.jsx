@@ -1,4 +1,3 @@
-// src/pages/SEOService.jsx
 import React from "react";
 import { FaSearch, FaChartLine, FaLink, FaCogs, FaMapMarkerAlt, FaShoppingCart, FaYoutube, FaUsers } from "react-icons/fa";
 import Footer from "../../components/Footer";
@@ -42,11 +41,22 @@ export default function SEOService() {
         </div>
       </section>
 
+
       {/* Services Section */}
       <section className="max-w-7xl mx-auto py-20 px-6 md:px-12">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Our SEO Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {[/* service items */].map((service, i) => (
+          {[
+            { icon: <FaSearch className="text-red-600 text-4xl mb-4 mx-auto" />, title: "Keyword Research & Strategies", desc: "Analyze industry-specific keywords, create targeted lists, and develop strategies tailored for your business." },
+            { icon: <FaCogs className="text-red-600 text-4xl mb-4 mx-auto" />, title: "On-Page SEO", desc: "Optimizing website structure, content, and metadata for a seamless user experience and higher search rankings." },
+            { icon: <FaLink className="text-red-600 text-4xl mb-4 mx-auto" />, title: "Off-Page SEO", desc: "Build authority and traffic through backlinks, guest blogging, citations, and content marketing." },
+            { icon: <FaCogs className="text-red-600 text-4xl mb-4 mx-auto" />, title: "Technical SEO", desc: "Improve page speed, conduct audits, and optimize backend for better indexing and ranking." },
+            { icon: <FaMapMarkerAlt className="text-red-600 text-4xl mb-4 mx-auto" />, title: "Local SEO", desc: "Enhance local search visibility, manage profiles, and optimize Google My Business to attract nearby customers." },
+            { icon: <FaUsers className="text-red-600 text-4xl mb-4 mx-auto" />, title: "Organic SEO", desc: "Use white-hat techniques, trend analysis, and audience research to drive sustainable traffic growth." },
+            { icon: <FaShoppingCart className="text-red-600 text-4xl mb-4 mx-auto" />, title: "Ecommerce SEO", desc: "Rank eCommerce stores on Google’s first page, ensuring smooth shopping experiences and better retention." },
+            { icon: <FaYoutube className="text-red-600 text-4xl mb-4 mx-auto" />, title: "YouTube SEO", desc: "Optimize videos and channels to increase views, watch time, and subscribers." },
+            { icon: <FaLink className="text-red-600 text-4xl mb-4 mx-auto" />, title: "Link Building", desc: "Secure authoritative backlinks using ethical strategies to boost long-term SEO performance." },
+          ].map((service, i) => (
             <div key={i} className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition border border-gray-200 text-center">
               {service.icon}
               <h3 className="text-xl font-bold mb-3 text-red-600">{service.title}</h3>
@@ -60,7 +70,12 @@ export default function SEOService() {
       <section className="bg-gray-100 py-20 px-6 md:px-12">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Why Choose Secure Media?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 max-w-6xl mx-auto">
-          {[/* why choose items */].map((item, i) => (
+          {[
+            { title: "Result-Oriented", desc: "We focus on measurable KPIs, ensuring SEO strategies deliver tangible results." },
+            { title: "Updated Strategies", desc: "Our team stays ahead with the latest SEO trends and Google updates for optimized outcomes." },
+            { title: "Affordable Services", desc: "Get maximum ROI with competitively priced professional SEO services." },
+            { title: "Transparent Communication", desc: "We maintain clear communication, keeping you informed at every stage of the process." },
+          ].map((item, i) => (
             <div key={i} className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition border border-gray-200 text-center">
               <h3 className="text-xl font-semibold mb-3 text-red-600">{item.title}</h3>
               <p className="text-gray-700 leading-relaxed">{item.desc}</p>

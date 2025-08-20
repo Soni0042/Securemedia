@@ -64,7 +64,7 @@ const Affiliate = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-5xl  mb-6">
-              Affiliate Marketing
+              Transform your traffic into revenue with Smart Affiliate Strategies.
             </h1>
             <p className="text-lg md:text-xl text-white">
               Transform your website traffic into a steady stream of income with
