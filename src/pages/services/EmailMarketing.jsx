@@ -29,7 +29,7 @@ export default function EmailMarketing() {
             <img
               src="/emm.png"
               alt="Email Marketing"
-              className="w-full md:w-4/5 lg:w-3/4 xl:w-2/3 h-auto rounded-xl "
+              className="w-full md:w-4/5 lg:w-3/4 xl:w-2/3 h-auto "
             />
           </div>
         </div>
