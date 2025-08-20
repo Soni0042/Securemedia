@@ -19,7 +19,7 @@ export default function Contact() {
       <section className="relative w-full h-screen bg-gradient-to-r from-red-800 to-red-600 text-white flex items-center">
         <div className="max-w-6xl mx-auto px-6 md:px-20 text-center">
           <motion.h1
-            className="text-4xl md:text-5xl font-bold mb-4 leading-tight"
+            className="text-4xl md:text-5xl  mb-4 leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
