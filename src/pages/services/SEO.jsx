@@ -11,7 +11,7 @@ export default function SEOService() {
       <section className="bg-gradient-to-r from-red-600 to-red-800 text-white py-32 px-6">
         <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10">
           <div className="text-center md:text-left md:w-1/2">
-            <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+            <h1 className="text-4xl md:text-5xl  mb-4 leading-tight">
               Elevate Your Online Presence with Professional SEO
             </h1>
             <p className="text-lg md:text-xl leading-relaxed">

@@ -13,7 +13,7 @@ export default function EmailMarketing() {
           
           {/* Text */}
           <div className="md:w-1/2 text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+            <h1 className="text-4xl md:text-5xl  mb-4 leading-tight">
               Smart Email Marketing for Smarter Growth
             </h1>
             <p className="text-lg md:text-xl leading-relaxed max-w-xl mx-auto md:mx-0">
