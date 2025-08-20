@@ -22,7 +22,7 @@ export default function SEOService() {
             </button>
           </div>
           <div className="md:w-1/2 flex justify-center">
-            <img src="/seo.png" alt="SEO Services" className="w-full max-w-md rounded-xl shadow-lg" />
+            <img src="/seo.png" alt="SEO Services" className="w-full max-w-md " />
           </div>
         </div>
       </section>
