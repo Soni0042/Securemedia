@@ -16,6 +16,7 @@ const Event = () => {
     "/event (10).jpeg",
     "/event (11).jpeg",
     "/event (12).jpeg",
+  
   ];
 
   return (
@@ -50,7 +51,7 @@ const Event = () => {
               <img
                 src={img}
                 alt={`Global Event ${index + 1}`}
-                className="w-full h-64 object-cover"
+                className="w-full h-120 object-cover"
               />
             </div>
           ))}

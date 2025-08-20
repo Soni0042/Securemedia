@@ -11,11 +11,14 @@ const InHouse = () => {
     "/inhouse (5).png",
     "/inhouse (6).png",
     "/inhouse (7).png",
-    "/inhouse (8).png",
     "/inhouse (9).png",
     "/inhouse (10).png",
-    "/inhouse (11).png",
     "/inhouse (12).png",
+    "/inhouse (13).jpeg",
+    "/inhouse (14).jpeg",
+    "/inhouse (15).jpeg",
+    "/inhouse (16).jpeg",
+    "/inhouse (17).jpeg",
   ];
 
   return (
@@ -50,7 +53,7 @@ const InHouse = () => {
               <img
                 src={img}
                 alt={`In-house Event ${index + 1}`}
-                className="w-full h-64 object-cover"
+                className="w-full h-120 object-cover"
               />
             </div>
           ))}
