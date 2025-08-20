@@ -2,6 +2,7 @@
 import React from "react";
 import { FaUsers, FaClock, FaChartLine, FaEnvelopeOpenText, FaClipboardList, FaPenNib } from "react-icons/fa";
 import Footer from "../../components/Footer";
+import { motion } from "framer-motion";
 
 export default function EmailMarketing() {
   return (
@@ -12,8 +13,13 @@ export default function EmailMarketing() {
         <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-start justify-between gap-10">
           
           {/* Text */}
-          <div className="md:w-1/2 text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl  mb-4 leading-tight">
+          <motion.div
+            className="md:w-1/2 text-center md:text-left"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-5xl mb-4 leading-tight">
               Smart Email Marketing for Smarter Growth
             </h1>
             <p className="text-lg md:text-xl leading-relaxed max-w-xl mx-auto md:mx-0">
@@ -22,16 +28,21 @@ export default function EmailMarketing() {
             <button className="mt-8 bg-white text-red-700 font-bold px-8 py-3 rounded-full shadow-md hover:bg-gray-100 transition">
               Get Started
             </button>
-          </div>
+          </motion.div>
 
           {/* Image */}
-          <div className="md:w-1/2 flex justify-end md:items-start">
+          <motion.div
+            className="md:w-1/2 flex justify-end md:items-start"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <img
               src="/emm.png"
               alt="Email Marketing"
-              className="w-full md:w-4/5 lg:w-3/4 xl:w-2/3 h-auto "
+              className="w-full md:w-4/5 lg:w-3/4 xl:w-2/3 h-auto"
             />
-          </div>
+          </motion.div>
         </div>
       </section>
 

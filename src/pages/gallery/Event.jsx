@@ -24,7 +24,7 @@ const Event = () => {
 
       {/* ================= HEADER ================= */}
       <section className="py-16 px-6 md:px-20 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">EVENT GALLERY</h1>
+        <h1 className="text-4xl md:text-5xl  mb-4">EVENT GALLERY</h1>
         <p className="text-lg md:text-xl text-gray-600">
           Event highlights captured in stunning photos
         </p>

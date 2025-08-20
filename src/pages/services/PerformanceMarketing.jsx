@@ -1,16 +1,24 @@
 // src/pages/PerformanceMarketing.jsx
 import React from "react";
 import Footer from "../../components/Footer";
+import { motion } from "framer-motion";
 
 export default function PerformanceMarketing() {
   return (
     <div className="bg-gradient-to-r from-red-600 to-red-800 text-white font-sans min-h-screen flex flex-col">
+
       {/* ================= HERO SECTION ================= */}
       <main className="flex-grow">
         <section className="min-h-screen flex flex-col md:flex-row items-center justify-center gap-12 px-6 md:px-20">
+          
           {/* Left: Text */}
-          <div className="flex-1 flex flex-col justify-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-tight">
+          <motion.div
+            className="flex-1 flex flex-col justify-center"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-5xl md:text-6xl mb-4 tracking-tight">
               Performance Marketing
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold mb-6">
@@ -22,16 +30,21 @@ export default function PerformanceMarketing() {
             <button className="mt-4 bg-white text-red-600 font-bold px-8 py-3 rounded-full shadow-md hover:bg-gray-100 transition self-start">
               Get Started
             </button>
-          </div>
+          </motion.div>
 
           {/* Right: Hero Image */}
-          <div className="flex-1 flex justify-center">
+          <motion.div
+            className="flex-1 flex justify-center"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <img
               src="/pmg.png"
               alt="Performance Marketing Illustration"
               className="w-full max-w-md rounded-xl object-contain"
             />
-          </div>
+          </motion.div>
         </section>
 
         {/* ================= KEY METRICS SECTION ================= */}

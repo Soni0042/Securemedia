@@ -9,6 +9,7 @@ import {
   FaMoneyBillWave,
   FaRocket,
 } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Affiliate = () => {
   const steps = [
@@ -51,13 +52,18 @@ const Affiliate = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-r from-red-600 to-red-800 text-white font-sans min-h-screen">
+    <div className="bg-gradient-to-r from-red-600 to-red-800 text-white font-sans min-h-screen flex flex-col">
+
       {/* ================= HERO ================= */}
       <section className="min-h-screen flex items-center px-6 md:px-20">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
           {/* Left Text */}
-          <div>
-            <h1 className="text-4xl md:text-5xl font mb-6">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-5xl  mb-6">
               Affiliate Marketing
             </h1>
             <p className="text-lg md:text-xl text-white">
@@ -69,19 +75,22 @@ const Affiliate = () => {
             <button className="mt-6 bg-white text-red-600 font-bold px-8 py-3 rounded-full shadow-md hover:bg-gray-100 transition">
               Get Started
             </button>
-          </div>
+          </motion.div>
 
           {/* Right Image */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <img
               src="/afff.png"
               alt="Affiliate Marketing"
               className="w-full"
             />
-          </div>
+          </motion.div>
         </div>
       </section>
-
 
       {/* ================= HOW AFFILIATES WORK ================= */}
       <section className="py-20 px-6 md:px-20 bg-gray-50">
