@@ -19,7 +19,7 @@ export default function Contact() {
       <section className="relative w-full h-screen bg-gradient-to-r from-red-800 to-red-600 text-white flex items-center">
         <div className="max-w-6xl mx-auto px-6 md:px-20 text-center">
           <motion.h1
-            className="text-4xl md:text-5xl  mb-4 leading-tight"
+            className="text-4xl md:text-5xl mb-4 leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -39,8 +39,11 @@ export default function Contact() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
+            onClick={() => {
+              document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" });
+            }}
           >
-            Contact Us
+            Get Started
           </motion.button>
         </div>
       </section>
@@ -66,7 +69,7 @@ export default function Contact() {
       </section>
 
       {/* ================= CONTACT FORM ================= */}
-      <section className="py-16">
+      <section id="contact-form" className="py-16">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
             Send Us a Message
