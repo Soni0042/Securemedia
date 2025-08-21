@@ -2,8 +2,10 @@ import React from "react";
 import { FaSearch, FaChartLine, FaLink, FaCogs, FaMapMarkerAlt, FaShoppingCart, FaYoutube, FaUsers } from "react-icons/fa";
 import Footer from "../../components/Footer";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 export default function SEOService() {
+   const navigate = useNavigate();
   return (
     <div className="flex flex-col min-h-screen font-sans text-gray-900 bg-gray-50">
 
@@ -24,7 +26,7 @@ export default function SEOService() {
             <p className="text-lg md:text-xl leading-relaxed">
               Stand out in the digital landscape. Our expert SEO services improve search engine visibility, drive organic traffic, and help potential customers find your business effortlessly.
             </p>
-            <button className="mt-6 bg-white text-red-600 font-bold px-8 py-3 rounded-full shadow-md hover:bg-gray-100 transition">
+            <button onClick={() => navigate("/contact-us")} className="mt-6 bg-white text-red-600 font-bold px-8 py-3 rounded-full shadow-md hover:bg-gray-100 transition">
               Get Started
             </button>
           </motion.div>

@@ -2,8 +2,10 @@ import { motion } from "framer-motion";
 import { FaGamepad, FaShoppingCart, FaPlane, FaHome, FaMoneyBillWave, FaLeaf } from "react-icons/fa";
 import NumbersMatter from "../components/NumbersMatter";
 import Footer from "../components/Footer";
-
+import { useNavigate } from "react-router-dom";
 export default function Home() {
+    const navigate = useNavigate();
+
   // Animation Variants
   const fadeUp = {
     hidden: { opacity: 0, y: 30 },
@@ -54,10 +56,10 @@ export default function Home() {
             variants={fadeUp}
             transition={{ delay: 0.6 }}
           >
-            <button className="bg-red-600 text-white font-bold px-8 py-3 rounded-full shadow hover:bg-red-700 transition">
+            <button  onClick={() => navigate("/contact-us")} className="bg-red-600 text-white font-bold px-8 py-3 rounded-full shadow hover:bg-red-700 transition">
               Get Started
             </button>
-            <button className="border border-gray-300 text-gray-700 font-bold px-8 py-3 rounded-full hover:bg-gray-100 transition">
+            <button onClick={()=> navigate('/about-us')} className="border border-gray-300 text-gray-700 font-bold px-8 py-3 rounded-full hover:bg-gray-100 transition">
               Learn More
             </button>
           </motion.div>

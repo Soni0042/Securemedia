@@ -3,8 +3,10 @@ import React from "react";
 import { FaUsers, FaClock, FaChartLine, FaEnvelopeOpenText, FaClipboardList, FaPenNib } from "react-icons/fa";
 import Footer from "../../components/Footer";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 export default function EmailMarketing() {
+  const navigate = useNavigate();
   return (
     <div className="flex flex-col min-h-screen font-sans text-gray-900 bg-gray-50">
       
@@ -25,7 +27,7 @@ export default function EmailMarketing() {
             <p className="text-lg md:text-xl leading-relaxed max-w-xl mx-auto md:mx-0">
               Reach real people who matter, maximize engagement, and grow your business faster with our expert email marketing strategies.
             </p>
-            <button className="mt-8 bg-white text-red-700 font-bold px-8 py-3 rounded-full shadow-md hover:bg-gray-100 transition">
+            <button onClick={() => navigate("/contact-us")}className="mt-8 bg-white text-red-700 font-bold px-8 py-3 rounded-full shadow-md hover:bg-gray-100 transition">
               Get Started
             </button>
           </motion.div>

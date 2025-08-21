@@ -2,8 +2,10 @@
 import React from "react";
 import Footer from "../../components/Footer";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 export default function PerformanceMarketing() {
+  const navigate = useNavigate();
   return (
     <div className="bg-gradient-to-r from-red-600 to-red-800 text-white font-sans min-h-screen flex flex-col">
 
@@ -27,7 +29,7 @@ export default function PerformanceMarketing() {
             <p className="text-lg mb-6 leading-relaxed max-w-xl">
               Stop chasing just clicks; start driving real business outcomes. Our strategies focus on converting ad interactions into measurable results, maximizing your ROI and fueling your growth.
             </p>
-            <button className="mt-4 bg-white text-red-600 font-bold px-8 py-3 rounded-full shadow-md hover:bg-gray-100 transition self-start">
+            <button onClick={() => navigate("/contact-us")} className="mt-4 bg-white text-red-600 font-bold px-8 py-3 rounded-full shadow-md hover:bg-gray-100 transition self-start">
               Get Started
             </button>
           </motion.div>

@@ -2,8 +2,10 @@
 import Footer from "../../components/Footer";
 import { FaGlobe, FaChartLine, FaLightbulb, FaSyncAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 export default function AboutSAM() {
+  const navigate = useNavigate();
   return (
     <div className="bg-white text-gray-800 font-sans flex flex-col min-h-screen">
 
@@ -29,14 +31,16 @@ export default function AboutSAM() {
             >
               We’re not just a performance marketing company – we’re your partner in achieving real-time, measurable outcomes.
             </motion.p>
-            <motion.button
-              className="bg-white text-red-600 font-bold px-8 py-3 rounded-full shadow-md hover:bg-gray-100 transition"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-            >
-              Get Started
-            </motion.button>
+           <motion.button
+  className="bg-white text-red-600 font-bold px-8 py-3 rounded-full shadow-md hover:bg-gray-100 transition"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.4, duration: 0.8 }}
+  onClick={() => navigate("/contact-us")}
+>
+  Get Started
+</motion.button>
+
           </div>
 
           {/* Right: Hero Image */}
