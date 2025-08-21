@@ -43,7 +43,7 @@ export default function Contact() {
               document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" });
             }}
           >
-            Get Started
+            Send a Message
           </motion.button>
         </div>
       </section>
