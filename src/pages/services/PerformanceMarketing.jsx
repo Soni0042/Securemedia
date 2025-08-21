@@ -18,11 +18,11 @@ export default function PerformanceMarketing() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl mb-4 tracking-tight">
-              Performance Marketing
+            <h1 className="text-5xl md:text-5xl mb-4 tracking-tight">
+              From Clicks to Conversions:
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold mb-6">
-              From Clicks to Conversions
+               Drive Tangible Returns on Your Ads
             </h2>
             <p className="text-lg mb-6 leading-relaxed max-w-xl">
               Stop chasing just clicks; start driving real business outcomes. Our strategies focus on converting ad interactions into measurable results, maximizing your ROI and fueling your growth.

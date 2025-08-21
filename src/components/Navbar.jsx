@@ -1,13 +1,37 @@
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaChevronDown } from "react-icons/fa";
-
+import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState({});
+
+  const handleDropdownToggle = (name) => {
+    setDropdownOpen((prev) => ({
+      ...prev,
+      [name]: !prev[name],
+    }));
+  };
+
+  const closeAll = () => {
+    setMenuOpen(false);
+    setDropdownOpen({});
+  };
+
   return (
-    <nav className="bg-white text-black px-6 py-4 flex items-center justify-between shadow" style={{ height: "90px" }}>
-      {/* Logo */}
-      <div className="flex items-center">
-        <Link to="/">
+    <nav className="bg-white text-black px-6 py-4 relative z-50" style={{ height: "90px" }}>
+      <div className="max-w-7xl mx-auto flex items-center justify-between h-full">
+        {/* Hamburger menu on left (mobile only) */}
+        <button
+          className="md:hidden p-2 text-2xl focus:outline-none z-50"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+        >
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+
+        {/* Logo */}
+        <Link to="/" className="flex items-center z-50 mx-4 md:mx-0">
           <img
             src="/New Logo 1.png"
             alt="Company Logo"
@@ -15,76 +39,179 @@ export default function Navbar() {
             style={{ maxHeight: "150px" }}
           />
         </Link>
+
+        {/* Desktop menu */}
+        <ul className="hidden md:flex items-center space-x-6">
+          <li>
+            <Link to="/" className="hover:text-[#E53935]">Home</Link>
+          </li>
+          <li>
+            <Link to="/about-us" className="hover:text-[#E53935]">About Us</Link>
+          </li>
+          <NavDropdown
+            label="Services"
+            links={[
+              { to: "/services/affiliate-marketing", label: "Affiliate Marketing" },
+              { to: "/services/performance-marketing", label: "Performance Marketing" },
+              { to: "/services/seo", label: "SEO" },
+              { to: "/services/email-marketing", label: "Email Marketing" },
+              { to: "/services/ecommerce-marketing", label: "Ecommerce Marketing" },
+              { to: "/services/lead-generation", label: "Lead Generation" },
+            ]}
+          />
+          <li>
+            <Link to="/contact-us" className="hover:text-[#E53935]">Contact Us</Link>
+          </li>
+          <li>
+            <Link to="/blog" className="hover:text-[#E53935]">Blog</Link>
+          </li>
+          <NavDropdown
+            label="Gallery"
+            links={[
+              { to: "/gallery/in-house", label: "In-House" },
+              { to: "/gallery/event", label: "Event" },
+            ]}
+          />
+          <NavDropdown
+            label="SAM's Workforce"
+            links={[
+              { to: "/people-in-sam", label: "Our Team" },
+              { to: "#", label: "Careers" },
+            ]}
+          />
+        </ul>
+
+        {/* Mobile menu overlay */}
+        {menuOpen && (
+          <div className="fixed inset-0 bg-black/30 z-40" onClick={closeAll}></div>
+        )}
+
+        {/* Mobile sliding menu */}
+        <div
+          className={`fixed md:hidden top-0 right-0 w-72 h-full bg-white shadow-lg z-50 transform transition-transform duration-300 ${
+            menuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          <button
+            className="absolute top-5 right-6 text-2xl"
+            onClick={closeAll}
+            aria-label="Close menu"
+          >
+            <FaTimes />
+          </button>
+
+          <ul className="flex flex-col space-y-2 mt-20 px-7">
+            <li>
+              <Link to="/" className="block py-3 hover:text-[#E53935]" onClick={closeAll}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/about-us" className="block py-3 hover:text-[#E53935]" onClick={closeAll}>
+                About Us
+              </Link>
+            </li>
+
+            <li>
+              <button
+                type="button"
+                className="w-full flex justify-between items-center py-3 hover:text-[#E53935]"
+                onClick={() => handleDropdownToggle("services")}
+              >
+                <span>Services</span>
+                <FaChevronDown
+                  className={`ml-2 transform transition ${
+                    dropdownOpen["services"] ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              {dropdownOpen["services"] && (
+                <ul className="ml-4 mt-1 space-y-1">
+                  <li><Link to="/services/affiliate-marketing" className="block py-2 hover:text-[#E53935]" onClick={closeAll}>Affiliate Marketing</Link></li>
+                  <li><Link to="/services/performance-marketing" className="block py-2 hover:text-[#E53935]" onClick={closeAll}>Performance Marketing</Link></li>
+                  <li><Link to="/services/seo" className="block py-2 hover:text-[#E53935]" onClick={closeAll}>SEO</Link></li>
+                  <li><Link to="/services/email-marketing" className="block py-2 hover:text-[#E53935]" onClick={closeAll}>Email Marketing</Link></li>
+                  <li><Link to="/services/ecommerce-marketing" className="block py-2 hover:text-[#E53935]" onClick={closeAll}>Ecommerce Marketing</Link></li>
+                  <li><Link to="/services/lead-generation" className="block py-2 hover:text-[#E53935]" onClick={closeAll}>Lead Generation</Link></li>
+                </ul>
+              )}
+            </li>
+
+            <li>
+              <Link to="/contact-us" className="block py-3 hover:text-[#E53935]" onClick={closeAll}>
+                Contact Us
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/blog" className="block py-3 hover:text-[#E53935]" onClick={closeAll}>
+                Blog
+              </Link>
+            </li>
+
+            <li>
+              <button
+                type="button"
+                className="w-full flex justify-between items-center py-3 hover:text-[#E53935]"
+                onClick={() => handleDropdownToggle("gallery")}
+              >
+                <span>Gallery</span>
+                <FaChevronDown
+                  className={`ml-2 transform transition ${
+                    dropdownOpen["gallery"] ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              {dropdownOpen["gallery"] && (
+                <ul className="ml-4 mt-1 space-y-1">
+                  <li><Link to="/gallery/in-house" className="block py-2 hover:text-[#E53935]" onClick={closeAll}>In-House</Link></li>
+                  <li><Link to="/gallery/event" className="block py-2 hover:text-[#E53935]" onClick={closeAll}>Event</Link></li>
+                </ul>
+              )}
+            </li>
+
+            <li>
+              <button
+                type="button"
+                className="w-full flex justify-between items-center py-3 hover:text-[#E53935]"
+                onClick={() => handleDropdownToggle("sam")}
+              >
+                <span>SAM's Workforce</span>
+                <FaChevronDown
+                  className={`ml-2 transform transition ${
+                    dropdownOpen["sam"] ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              {dropdownOpen["sam"] && (
+                <ul className="ml-4 mt-1 space-y-1">
+                  <li><Link to="/people-in-sam" className="block py-2 hover:text-[#E53935]" onClick={closeAll}>Our Team</Link></li>
+                  <li><Link to="#" className="block py-2 hover:text-[#E53935]" onClick={closeAll}>Careers</Link></li>
+                </ul>
+              )}
+            </li>
+          </ul>
+        </div>
       </div>
-
-      {/* Menu */}
-      <ul className="flex items-center space-x-6">
-        {/* Home */}
-        <li>
-          <Link to="/" className="hover:text-[#E53935]">Home</Link>
-        </li>
-
-        {/* About Us */}
-        <li className="relative group">
-          <span className="flex items-center hover:text-[#E53935] cursor-default select-none">
-            About Us <FaChevronDown className="ml-1 text-xs" />
-          </span>
-          <ul className="absolute left-0 top-full w-48 bg-white border border-gray-200 hidden group-hover:block rounded shadow-lg z-50">
-            <li><Link to="/about/AboutSAM" className="block px-4 py-2 hover:bg-gray-100">About SAM</Link></li>
-            <li><Link to="/about/mission" className="block px-4 py-2 hover:bg-gray-100">Mission</Link></li>
-            <li><Link to="/about/vision" className="block px-4 py-2 hover:bg-gray-100">Vision</Link></li>
-          </ul>
-        </li>
-
-        {/* Services */}
-        <li className="relative group">
-          <span className="flex items-center hover:text-[#E53935] cursor-default select-none">
-            Services <FaChevronDown className="ml-1 text-xs" />
-          </span>
-          <ul className="absolute left-0 top-full w-56 bg-white border border-gray-200 hidden group-hover:block rounded shadow-lg z-50">
-            <li><Link to="/services/affiliate-marketing" className="block px-4 py-2 hover:bg-gray-100">Affiliate Marketing</Link></li>
-            <li><Link to="/services/performance-marketing" className="block px-4 py-2 hover:bg-gray-100">Performance Marketing</Link></li>
-            <li><Link to="/services/seo" className="block px-4 py-2 hover:bg-gray-100">SEO</Link></li>
-            <li><Link to="/services/email-marketing" className="block px-4 py-2 hover:bg-gray-100">Email Marketing</Link></li>
-            <li><Link to="/services/ecommerce-marketing" className="block px-4 py-2 hover:bg-gray-100">Ecommerce Marketing</Link></li>
-            <li><Link to="/services/lead-generation" className="block px-4 py-2 hover:bg-gray-100">Lead Generation</Link></li>
-          </ul>
-        </li>
-
-        {/* Contact Us */}
-        <li>
-          <Link to="/contact" className="flex items-center hover:text-[#E53935] transition-colors ">
-            Contact Us
-          </Link>
-        </li>
-
-        {/* Blog */}
-        <li>
-          <Link to="/blog" className="hover:text-[#E53935]">Blog</Link>
-        </li>
-
-        {/* Gallery */}
-        <li className="relative group">
-          <span className="flex items-center hover:text-[#E53935] cursor-default select-none">
-            Gallery <FaChevronDown className="ml-1 text-xs" />
-          </span>
-          <ul className="absolute left-0 top-full w-40 bg-white border border-gray-200 hidden group-hover:block rounded shadow-lg z-50">
-            <li><Link to="/gallery/in-house" className="block px-4 py-2 hover:bg-gray-100">In-House</Link></li>
-            <li><Link to="/gallery/event" className="block px-4 py-2 hover:bg-gray-100">Event</Link></li>
-          </ul>
-        </li>
-
-        {/* SAM's Workforce */}
-        <li className="relative group">
-          <span className="flex items-center hover:text-[#E53935] cursor-default select-none">
-            SAM's Workforce <FaChevronDown className="ml-1 text-xs" />
-          </span>
-          <ul className="absolute left-0 top-full w-44 bg-white border border-gray-200 hidden group-hover:block rounded shadow-lg z-50">
-            <li><Link to="/people-in-sam" className="block px-4 py-2 hover:bg-gray-100">Our Team</Link></li>
-            <li><Link to="#" className="block px-4 py-2 hover:bg-gray-100">Careers</Link></li>
-          </ul>
-        </li>
-      </ul>
     </nav>
+  );
+}
+
+function NavDropdown({ label, links }) {
+  return (
+    <li className="relative group">
+      <span className="flex items-center hover:text-[#E53935] cursor-pointer select-none">
+        {label} <FaChevronDown className="ml-1 text-xs" />
+      </span>
+      <ul className="absolute left-0 top-full w-56 bg-white border border-gray-200 hidden group-hover:block rounded shadow-lg z-50">
+        {links.map((link) => (
+          <li key={link.to}>
+            <Link to={link.to} className="block px-4 py-2 hover:bg-gray-100">
+              {link.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </li>
   );
 }
