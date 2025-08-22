@@ -128,7 +128,7 @@ export default function Contact() {
 
     <div className="overflow-hidden rounded-2xl shadow-lg border border-gray-200">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.635253098782!2d77.08122231492107!3d28.554226982447494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b65a706c9bb%3A0x58f181fdaebc86c!2sUdyog%20Vihar%20Phase%20V%2C%20Gurugram%2C%20Haryana!5e0!3m2!1sen!2sin!4v1692202687850!5m2!1sen!2sin"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.2458391956993!2d77.084111!3d28.5022504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1f547d4da333%3A0x18377a48c79bf137!2sSecure%20Affiliate%20Media%20Pvt%20Ltd%20%7C%20Best%20Affiliate%20Marketing%20Agency!5e0!3m2!1sen!2sin!4v1755857554546!5m2!1sen!2sin"
         width="100%"
         height="450"
         allowFullScreen=""
