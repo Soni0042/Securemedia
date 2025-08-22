@@ -88,8 +88,8 @@ export default function Navbar() {
 
         {/* Mobile sliding menu */}
         <div
-          className={`fixed md:hidden top-0 right-0 w-72 h-full bg-white shadow-lg z-50 transform transition-transform duration-300 ${
-            menuOpen ? "translate-x-0" : "translate-x-full"
+          className={`fixed md:hidden top-0 left-0 w-72 h-full bg-white shadow-lg z-50 transform transition-transform duration-300 ${
+            menuOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
           <button
