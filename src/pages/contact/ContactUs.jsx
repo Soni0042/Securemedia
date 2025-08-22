@@ -126,7 +126,7 @@ export default function Contact() {
       Our Office Location
     </h2>
 
-    <div className="overflow-hidden rounded-2xl shadow-lg border border-gray-200">
+    <div className="overflow-hidden rounded-2xl  border border-gray-200">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.2458391956993!2d77.084111!3d28.5022504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1f547d4da333%3A0x18377a48c79bf137!2sSecure%20Affiliate%20Media%20Pvt%20Ltd%20%7C%20Best%20Affiliate%20Marketing%20Agency!5e0!3m2!1sen!2sin!4v1755857554546!5m2!1sen!2sin"
         width="100%"
