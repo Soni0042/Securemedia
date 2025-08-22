@@ -150,9 +150,7 @@ export default function EmailMarketing() {
         <p className="mb-8 max-w-2xl mx-auto">
           With Secure Media, your emails don’t just reach inboxes—they reach the right people, at the right time, driving better engagement, leads, and revenue.
         </p>
-        <button className="bg-white text-red-700 font-bold px-8 py-3 rounded-full hover:bg-gray-100 transition">
-          Start Your Campaign Today
-        </button>
+      
       </section>
 
       {/* Footer */}

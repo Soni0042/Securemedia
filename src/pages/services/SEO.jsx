@@ -92,9 +92,7 @@ export default function SEOService() {
         <p className="max-w-2xl mx-auto text-lg md:text-xl mb-8 leading-relaxed">
           Connect with our SEO experts today and take the first step towards higher rankings, increased traffic, and business growth.
         </p>
-        <button className="bg-white text-red-600 font-bold px-8 py-3 rounded-full shadow-md hover:bg-gray-100 transition">
-          Get Started Today
-        </button>
+          
       </section>
 
       <Footer />

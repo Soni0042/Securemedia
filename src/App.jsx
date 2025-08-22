@@ -14,6 +14,7 @@ import Affiliate from "./pages/services/AffiliateMarketing";
 import PerformanceMarketing from "./pages/services/PerformanceMarketing";
 import SEO from "./pages/services/SEO";
 import EmailMarketing from "./pages/services/EmailMarketing";
+import EcommerceMarketing from "./pages/services/EcommerceMarketing";
 
 
 
@@ -37,6 +38,7 @@ export default function App() {
         <Route path="/services/performance-marketing" element={<PerformanceMarketing/>} />
         <Route path="/services/seo" element={<SEO/>} />
         <Route path="/services/email-marketing" element={<EmailMarketing/>} />
+        <Route path="/services/ecommerce-marketing" element={<EcommerceMarketing/>} />
         
 
         
