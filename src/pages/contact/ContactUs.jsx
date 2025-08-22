@@ -14,37 +14,51 @@ import { motion } from "framer-motion";
 export default function Contact() {
   return (
     <div className="bg-white text-gray-800 font-sans flex flex-col min-h-screen">
-
       {/* ================= HERO (Full-screen landing section) ================= */}
-      <section className="relative w-full h-screen bg-gradient-to-r from-red-800 to-red-600 text-white flex items-center">
-        <div className="max-w-6xl mx-auto px-6 md:px-20 text-center">
-          <motion.h1
-            className="text-4xl md:text-5xl mb-4 leading-tight"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+      <section className="relative w-full min-h-screen bg-gradient-to-r from-red-800 to-red-600 text-white flex items-center py-10 md:py-0">
+        <div className="max-w-6xl mx-auto px-6 md:px-20 flex flex-col md:grid md:grid-cols-2 items-center gap-10">
+          <div className="text-center md:text-left">
+            <motion.h1
+              className="text-4xl md:text-5xl mb-4 leading-tight"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              Let’s Start Something Great Together
+            </motion.h1>
+            <motion.p
+              className="text-lg md:text-xl max-w-2xl mx-auto md:mx-0 text-gray-200 mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+            >
+              We’re here to answer any questions you have and help you get started.
+            </motion.p>
+            <motion.button
+              className="bg-white text-red-600 font-bold px-8 py-3 rounded-full shadow-md hover:bg-gray-100 transition"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              onClick={() => {
+                document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              Send a Message
+            </motion.button>
+          </div>
+
+          <motion.div
+            className="flex justify-center md:justify-center w-full"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
           >
-            Let’s Start Something Great Together
-          </motion.h1>
-          <motion.p
-            className="text-lg md:text-xl max-w-2xl mx-auto text-gray-200 mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-          >
-            We’re here to answer any questions you have and help you get started.
-          </motion.p>
-          <motion.button
-            className="bg-white text-red-600 font-bold px-8 py-3 rounded-full shadow-md hover:bg-gray-100 transition"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            onClick={() => {
-              document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" });
-            }}
-          >
-            Send a Message
-          </motion.button>
+            <img
+              src="/cus.png"
+              alt="Contact Illustration"
+              className="w-full max-w-xs md:max-w-md md:ml-50 object-contain"
+            />
+          </motion.div>
         </div>
       </section>
 
@@ -75,32 +89,27 @@ export default function Contact() {
             Send Us a Message
           </h2>
           <form className="bg-white p-8 rounded-xl shadow-lg space-y-6">
-            {/* Name Fields */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <InputField label="First Name" placeholder="Enter your first name" />
               <InputField label="Last Name" placeholder="Enter your last name" />
             </div>
 
-            {/* Email & Phone */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <InputField label="Email Address" placeholder="Enter your email" type="email" />
               <InputField label="Phone Number" placeholder="Enter your phone number" type="tel" />
             </div>
 
-            {/* Subject */}
             <InputField label="Subject" placeholder="Enter subject" />
 
-            {/* Message */}
             <div>
               <label className="block text-gray-700 font-medium mb-2">Message</label>
               <textarea
                 rows="5"
                 placeholder="Write your message..."
                 className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-red-600"
-              ></textarea>
+              />
             </div>
 
-            {/* Submit Button */}
             <button
               type="submit"
               className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium transition w-full"
