@@ -25,8 +25,8 @@ export default function Footer() {
           <ul className="space-y-2">
             <li><a href="/" className="hover:text-[#E53935] transition">Home</a></li>
             <li><a href="/workforce" className="hover:text-[#E53935] transition">Work Force</a></li>
-            <li><a href="/about" className="hover:text-[#E53935] transition">About Us</a></li>
-            <li><a href="/contact" className="hover:text-[#E53935] transition">Contact Us</a></li>
+            <li><a href="/about-us" className="hover:text-[#E53935] transition">About Us</a></li>
+            <li><a href="/contact-us" className="hover:text-[#E53935] transition">Contact Us</a></li>
             <li><a href="/privacy-policy" className="hover:text-[#E53935] transition">Privacy Policy</a></li>
           </ul>
         </div>
@@ -61,7 +61,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-gray-300 text-center py-4 text-sm text-gray-600">
-        Copyright © 2019 thesecuremedia.com | All rights reserved by The Secure Media
+        © 2025 Secure Affiliate Media Pvt. Ltd. | All Rights Reserved.
       </div>
     </footer>
   );
