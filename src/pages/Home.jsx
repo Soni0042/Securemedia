@@ -1,20 +1,44 @@
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { FaGamepad, FaShoppingCart, FaPlane, FaHome, FaMoneyBillWave, FaLeaf } from "react-icons/fa";
 import NumbersMatter from "../components/NumbersMatter";
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
-export default function Home() {
-    const navigate = useNavigate();
+import emailjs from "@emailjs/browser";
 
-  // Animation Variants
+export default function Home() {
+  const navigate = useNavigate();
+  
   const fadeUp = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
-  }; 
+  };
+
+  // Contact Form states and refs
+  const form = useRef();
+  const [resultMessage, setResultMessage] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    // Send email to owner
+    emailjs.sendForm(
+      "service_jqebicj",
+      "template_wp03vjk",
+      form.current,
+      "cUHFy_7JRJgi-veRT"
+    )
+    .then(() => {
+      setResultMessage("Message sent successfully!");
+      e.target.reset();
+    })
+    .catch(() => {
+      setResultMessage("Failed to send the message. Please try again.");
+    });
+  };
 
   return (
     <div className="bg-white text-black font-sans min-h-screen leading-relaxed">
-
       {/* ================= HERO ================= */}
       <section className="relative min-h-[80vh] flex flex-col md:flex-row items-center justify-between px-6 sm:px-10 md:px-20 lg:px-32 gap-12">
 
@@ -307,9 +331,61 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+   {/* ================= CONTACT FORM ================= */}
+      <section id="contact-form" className="bg-gray-50 py-16 px-6 md:px-20">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
+            Send Us a Message
+          </h2>
+          <form ref={form} onSubmit={sendEmail} className="bg-white p-8 rounded-xl shadow-lg space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <InputField label="First Name" placeholder="Enter your first name" name="first_name" />
+              <InputField label="Last Name" placeholder="Enter your last name" name="last_name" />
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <InputField label="Email Address" placeholder="Enter your email" type="email" name="email" />
+              <InputField label="Phone Number" placeholder="Enter your phone number" type="tel" name="phone" />
+            </div>
+            <InputField label="Subject" placeholder="Enter subject" name="subject" />
+            <div>
+              <label className="block text-gray-700 font-medium mb-2">Message</label>
+              <textarea
+                name="message"
+                placeholder="Write your message..."
+                rows="5"
+                required
+                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-red-600"
+              />
+            </div>
+            <button
+              type="submit"
+              className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium transition w-full"
+            >
+              Send Message
+            </button>
+          </form>
+          {resultMessage && (
+            <p className="mt-6 text-center font-semibold text-gray-700">{resultMessage}</p>
+          )}
+        </div>
+      </section>  
       {/* ================= FOOTER ================= */}
       <Footer />
+    </div>
+  );
+}
+// Reusable InputField component
+function InputField({ label, placeholder, type = "text", name }) {
+  return (
+    <div>
+      <label className="block text-gray-700 font-medium mb-2">{label}</label>
+      <input
+        type={type}
+        name={name}
+        placeholder={placeholder}
+        required
+        className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-red-600"
+      />
     </div>
   );
 }
