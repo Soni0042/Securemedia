@@ -29,7 +29,7 @@ export default function Home() {
       "cUHFy_7JRJgi-veRT"
     )
     .then(() => {
-      setResultMessage("  Message sent successfully!");
+      setResultMessage(" ✔ Message sent successfully!");
       e.target.reset();
     })
     .catch(() => {
