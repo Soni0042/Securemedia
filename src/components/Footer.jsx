@@ -38,7 +38,7 @@ export default function Footer() {
             <a href="https://www.facebook.com/Secureaffiliatemedia" className="p-2 bg-gray-100 rounded-full hover:bg-[#E53935] hover:text-white transition">
               <FaFacebookF />
             </a>
-            <a href="https://www.linkedin.com/company/the-secure-media/" className="p-2 bg-gray-100 rounded-full hover:bg-[#E53935] hover:text-white transition">
+            <a href="https://www.instagram.com/secureaffiliatemedia/" className="p-2 bg-gray-100 rounded-full hover:bg-[#E53935] hover:text-white transition">
               <FaInstagram />
             </a>
             <a href="https://www.linkedin.com/company/the-secure-media/" className="p-2 bg-gray-100 rounded-full hover:bg-[#E53935] hover:text-white transition">
