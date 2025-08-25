@@ -35,13 +35,13 @@ export default function Footer() {
         <div>
           <h4 className="font-bold text-lg text-gray-900 mb-4">Follow Us</h4>
           <div className="flex space-x-4 text-xl">
-            <a href="#" className="p-2 bg-gray-100 rounded-full hover:bg-[#E53935] hover:text-white transition">
+            <a href="https://www.facebook.com/Secureaffiliatemedia" className="p-2 bg-gray-100 rounded-full hover:bg-[#E53935] hover:text-white transition">
               <FaFacebookF />
             </a>
-            <a href="#" className="p-2 bg-gray-100 rounded-full hover:bg-[#E53935] hover:text-white transition">
+            <a href="https://www.linkedin.com/company/the-secure-media/" className="p-2 bg-gray-100 rounded-full hover:bg-[#E53935] hover:text-white transition">
               <FaInstagram />
             </a>
-            <a href="#" className="p-2 bg-gray-100 rounded-full hover:bg-[#E53935] hover:text-white transition">
+            <a href="https://www.linkedin.com/company/the-secure-media/" className="p-2 bg-gray-100 rounded-full hover:bg-[#E53935] hover:text-white transition">
               <FaLinkedinIn />
             </a>
           </div>
