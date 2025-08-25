@@ -24,7 +24,6 @@ export default function Footer() {
           <h4 className="font-bold text-lg text-gray-900 mb-4">Pages</h4>
           <ul className="space-y-2">
             <li><a href="/" className="hover:text-[#E53935] transition">Home</a></li>
-            <li><a href="/workforce" className="hover:text-[#E53935] transition">Work Force</a></li>
             <li><a href="/about-us" className="hover:text-[#E53935] transition">About Us</a></li>
             <li><a href="/contact-us" className="hover:text-[#E53935] transition">Contact Us</a></li>
             <li><a href="/privacy-policy" className="hover:text-[#E53935] transition">Privacy Policy</a></li>
