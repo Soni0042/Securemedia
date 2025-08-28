@@ -40,76 +40,86 @@ export default function Home() {
 
   return (
     <div className="bg-white text-black font-sans min-h-screen leading-relaxed">
-      {/* ================= HERO ================= */}
-      <section className="relative min-h-[80vh] flex flex-col md:flex-row items-center justify-between px-6 sm:px-10 md:px-20 lg:px-32 gap-12">
+     
+<section
+      className="relative min-h-[90vh] flex flex-col md:flex-row items-center justify-between px-6 sm:px-10 md:px-20 lg:px-32 gap-12 bg-cover bg-center"
+      style={{ backgroundImage: "url('cv.png')" }}
+    >
+      
 
-        {/* Left: Text */}
-        <motion.div
-          className="flex-1 text-center md:text-left"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
+      {/* Left: Text */}
+      <motion.div
+        className="relative z-10 flex-1 text-center md:text-left"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <motion.h1
+          className="text-5xl sm:text-6xl md:text-7xl uppercase tracking-tight text-white leading-tight mb-6 drop-shadow"
+          variants={fadeUp}
         >
-          <motion.h1
-            className="text-5xl sm:text-6xl md:text-7xl  uppercase tracking-tight text-black leading-tight mb-6"
-            variants={fadeUp}
-          >
-            Performance <span className="text-red-600">Marketing</span> Company
-          </motion.h1>
+          Performance <span className="text-red-600">Marketing</span> Company
+        </motion.h1>
 
-          <motion.p
-            className="text-lg md:text-xl font-light text-gray-700 mb-8 max-w-xl mx-auto md:mx-0"
-            variants={fadeUp}
-            transition={{ delay: 0.2 }}
-          >
-            Unleash your performance with <strong className="text-[#E53935] font-semibold">Secure Affiliate Media</strong>.
-          </motion.p>
+        <motion.p
+          className="text-lg md:text-xl font-light text-white mb-8 max-w-xl mx-auto md:mx-0"
+          variants={fadeUp}
+          transition={{ delay: 0.2 }}
+        >
+          Unleash your performance with{" "}
+          <strong className="text-red-white font-semibold">Secure Affiliate Media</strong>.
+        </motion.p>
 
-          <motion.div
-            className="flex items-center justify-center md:justify-start mb-8"
-            variants={fadeUp}
-            transition={{ delay: 0.4 }}
-          >
-            <hr className="border-t-4 border-gray-300 w-24 opacity-60 mr-4" />
-            <span className="uppercase text-xs sm:text-sm tracking-widest text-gray-500">
-              Estb. 2019
-            </span>
-          </motion.div>
-
-          <motion.div
-            className="flex justify-center md:justify-start gap-4"
-            variants={fadeUp}
-            transition={{ delay: 0.6 }}
-          >
-            <button  onClick={() => navigate("/contact-us")} className="bg-red-600 text-white font-bold px-8 py-3 rounded-full shadow hover:bg-red-700 transition">
-              Get Started
-            </button>
-            <button onClick={()=> navigate('/about-us')} className="border border-gray-300 text-gray-700 font-bold px-8 py-3 rounded-full hover:bg-gray-100 transition">
-              Learn More
-            </button>
-          </motion.div>
+        <motion.div
+          className="flex items-center justify-center md:justify-start mb-8"
+          variants={fadeUp}
+          transition={{ delay: 0.4 }}
+        >
+          <hr className="border-t-4 border-white w-24 opacity-80 mr-4" />
+          <span className="uppercase text-xs sm:text-sm tracking-widest text-white">
+            Estb. 2019
+          </span>
         </motion.div>
 
-        {/* Right: Hero Image */}
         <motion.div
-          className="flex-1 flex justify-center mt-10 md:mt-0"
-          initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0, transition: { duration: 1, ease: "easeOut" } }}
-          viewport={{ once: true }}
+          className="flex justify-center md:justify-start gap-4"
+          variants={fadeUp}
+          transition={{ delay: 0.6 }}
         >
-          <motion.img
-            src="/pm.png"
-            alt="Performance Marketing"
-            className="w-full max-w-md object-contain"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-          />
+          <button
+            onClick={() => navigate("/contact-us")}
+            className="bg-red-600 text-white font-bold px-8 py-3 rounded-full shadow hover:bg-red-700 transition"
+          >
+            Get Started
+          </button>
+          <button
+            onClick={() => navigate("/about-us")}
+            className=" border-2 text-white font-bold px-8 py-3 rounded-full shadow hover:bg-red-600 transition"
+          >
+            Learn More
+          </button>
         </motion.div>
+      </motion.div>
 
-      </section>
+      {/* Right: Hero Image */}
+      <motion.div
+        className="relative z-10 flex-1 flex justify-center mt-10 md:mt-0"
+        initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 1, x: 0, transition: { duration: 1, ease: "easeOut"}}}
+        viewport={{ once: true }}
+      >
+        <motion.img
+            // src="/ni3.png"
+          //  alt="Performance Marketing"
+          className="w-full max-w-md object-fill"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.3 }}
+        />
+      </motion.div>
+    </section>
 
       {/* ================= VALUE PROPOSITIONS ================= */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-20"  >
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6 tracking-tight">Why Partner With Us</h2>
           <p className="text-lg md:text-xl text-gray-600 mb-12">
@@ -169,7 +179,7 @@ export default function Home() {
       </section>
 
       {/* ================= TOP VERTICALS ================= */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white-50">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold text-gray-800 mb-4 tracking-tight">Our Top Verticals</h2>
           <p className="text-lg md:text-xl text-gray-600 mb-10">
