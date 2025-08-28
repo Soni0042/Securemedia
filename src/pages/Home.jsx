@@ -43,7 +43,7 @@ export default function Home() {
      
 <section
       className="relative min-h-[80vh] flex flex-col md:flex-row items-center justify-between px-6 sm:px-10 md:px-20 lg:px-32 gap-12 bg-cover bg-center"
-      style={{ backgroundImage: "url('/QSWObE.jpg')" }}
+      //style={{ backgroundImage: "url('/QSWObE.jpg')" }}
     >
       
 
@@ -101,6 +101,21 @@ export default function Home() {
         </motion.div>
       </motion.div>
 
+      {/* Right: Hero Image */}
+      <motion.div
+        className="relative z-10 flex-1 flex justify-center mt-10 md:mt-0"
+        initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 1, x: 0, transition: { duration: 1, ease: "easeOut"}}}
+        viewport={{ once: true }}
+      >
+        <motion.img
+          src="/pm.png"
+          alt="Performance Marketing"
+          className="w-full max-w-md object-contain"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.3 }}
+        />
+      </motion.div>
     </section>
 
       {/* ================= VALUE PROPOSITIONS ================= */}
