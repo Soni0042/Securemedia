@@ -15,6 +15,7 @@ import PerformanceMarketing from "./pages/services/PerformanceMarketing";
 import SEO from "./pages/services/SEO";
 import EmailMarketing from "./pages/services/EmailMarketing";
 import EcommerceMarketing from "./pages/services/EcommerceMarketing";
+import PeopleInSAM from "./pages/PeopleInSAM";
 
 
 
@@ -39,6 +40,7 @@ export default function App() {
         <Route path="/services/seo" element={<SEO/>} />
         <Route path="/services/email-marketing" element={<EmailMarketing/>} />
         <Route path="/services/ecommerce-marketing" element={<EcommerceMarketing/>} />
+        <Route path="/people-in-sam" element={<PeopleInSAM/>} />
         
 
         

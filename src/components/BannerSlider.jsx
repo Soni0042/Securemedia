@@ -47,9 +47,9 @@ const BannerSlider = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 600,
+    speed: 3000,
     autoplay: true,
-    autoplaySpeed: 3500,
+    autoplaySpeed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
@@ -71,7 +71,6 @@ const BannerSlider = () => {
     { id: 1, image: "/1.png", alt: "Banner 1" },
     { id: 2, image: "/2.png", alt: "Banner 2" },
     { id: 3, image: "/3.png", alt: "Banner 3" },
-    { id: 4, image: "/4.png", alt: "Banner 4" },
     { id: 5, image: "/5.png", alt: "Banner 5" },
   ];
 
@@ -83,7 +82,7 @@ const BannerSlider = () => {
             <img
               src={banner.image}
               alt={banner.alt}
-              className="w-full object-cover rounded-xl shadow-md"
+              className="w-full object-cover rounded-xl"
             />
           </div>
         ))}

@@ -56,7 +56,7 @@ export default function Navbar() {
               { to: "/services/seo", label: "SEO" },
               { to: "/services/email-marketing", label: "Email Marketing" },
               { to: "/services/ecommerce-marketing", label: "Ecommerce Marketing" },
-              { to: "/services/lead-generation", label: "Lead Generation" },
+              // { to: "/services/lead-generation", label: "Lead Generation" },
             ]}
           />
           <li>
@@ -76,7 +76,7 @@ export default function Navbar() {
             label="SAM's Workforce"
             links={[
               { to: "/people-in-sam", label: "Our Team" },
-              { to: "#", label: "Careers" },
+              // { to: "#", label: "Careers" },
             ]}
           />
         </ul>
@@ -132,7 +132,7 @@ export default function Navbar() {
                   <li><Link to="/services/seo" className="block py-2 hover:text-[#E53935]" onClick={closeAll}>SEO</Link></li>
                   <li><Link to="/services/email-marketing" className="block py-2 hover:text-[#E53935]" onClick={closeAll}>Email Marketing</Link></li>
                   <li><Link to="/services/ecommerce-marketing" className="block py-2 hover:text-[#E53935]" onClick={closeAll}>Ecommerce Marketing</Link></li>
-                  <li><Link to="/services/lead-generation" className="block py-2 hover:text-[#E53935]" onClick={closeAll}>Lead Generation</Link></li>
+                  {/* <li><Link to="/services/lead-generation" className="block py-2 hover:text-[#E53935]" onClick={closeAll}>Lead Generation</Link></li> */}
                 </ul>
               )}
             </li>
@@ -186,7 +186,7 @@ export default function Navbar() {
               {dropdownOpen["sam"] && (
                 <ul className="ml-4 mt-1 space-y-1">
                   <li><Link to="/people-in-sam" className="block py-2 hover:text-[#E53935]" onClick={closeAll}>Our Team</Link></li>
-                  <li><Link to="#" className="block py-2 hover:text-[#E53935]" onClick={closeAll}>Careers</Link></li>
+                  {/* <li><Link to="#" className="block py-2 hover:text-[#E53935]" onClick={closeAll}>Careers</Link></li> */}
                 </ul>
               )}
             </li>

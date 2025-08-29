@@ -49,7 +49,7 @@ export default function Home() {
       <section className="bg-white py-20">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6 tracking-tight">Why Partner With Us</h2>
-          <p className="text-lg md:text-xl text-gray-600 mb-12">
+          <p className=" text-lg md:text-xl text-gray-600 mb-12">
             Our solutions are designed to deliver measurable results and sustainable growth for your business.
           </p>
           <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
