@@ -47,9 +47,9 @@ const BannerSlider = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 3000,
+    speed: 1000,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3050,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
