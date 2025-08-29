@@ -54,7 +54,7 @@ const BannerSlider = () => {
     slidesToScroll: 1,
     arrows: true,
     pauseOnHover: false,
-    adaptiveHeight: true, // dynamically adjust height to current slide
+    adaptiveHeight: true,
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
     responsive: [
@@ -71,6 +71,7 @@ const BannerSlider = () => {
     { id: 1, image: "/1.png", alt: "Banner 1" },
     { id: 2, image: "/2.png", alt: "Banner 2" },
     { id: 3, image: "/3.png", alt: "Banner 3" },
+   
     { id: 5, image: "/5.png", alt: "Banner 5" },
   ];
 
@@ -95,6 +96,7 @@ const BannerSlider = () => {
           content: '';
           display: none;
         }
+
         /* Custom arrow styling */
         .custom-arrow-button {
           background-color: rgba(255, 255, 255, 0.9);
@@ -102,6 +104,7 @@ const BannerSlider = () => {
           box-shadow: 0 2px 10px rgba(0,0,0,0.15);
           width: 50px;
           height: 50px;
+          display: flex;
           align-items: center;
           justify-content: center;
           cursor: pointer;
@@ -113,12 +116,15 @@ const BannerSlider = () => {
           border: none;
           padding: 0;
         }
+
         .custom-arrow-button:hover {
           background-color: white;
         }
+
         .slick-prev.custom-arrow-button {
           left: 20px;
         }
+
         .slick-next.custom-arrow-button {
           right: 20px;
         }
