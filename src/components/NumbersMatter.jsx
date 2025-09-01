@@ -22,8 +22,8 @@ export default function NumbersMatter() {
       <div className="max-w-7xl mx-auto text-center">
 
         {/* Heading */}
-        <h2 className="text-4xl sm:text-5xl font-extrabold mb-6 tracking-tight">
-          Numbers Matter
+        <h2 className="text-4xl sm:text-4xl font-bold mb-6 tracking-tight">
+          <span className="text-red-600"> Numbers</span> Matter
         </h2>
         <p className="text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-14 font-light text-gray-700">
           Our method of measuring success is to calculate the numbers each time.
@@ -36,7 +36,7 @@ export default function NumbersMatter() {
               key={label}
               className="bg-gray-100 p-8 rounded-2xl shadow-md flex flex-col items-center transition-transform transform hover:scale-105"
             >
-              <p className="text-5xl sm:text-6xl md:text-7xl font-extrabold mb-3 text-red-600 min-w-[120px] text-center font-mono">
+              <p className="text-5xl sm:text-6xl md:text-7xl font-bold mb-3 text-red-600 min-w-[120px] text-center font-mono">
                 <CountUp
                   start={0}
                   end={value}

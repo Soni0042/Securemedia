@@ -99,9 +99,9 @@ const BannerSlider = () => {
 
         /* Custom arrow styling */
         .custom-arrow-button {
-          background-color: rgba(255, 255, 255, 0.9);
+          background-color: rgba(255, 255, 255, 0.1);
           border-radius: 50%;
-          box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+          box-shadow: 0 2px 10px rgba(0,0,0,0.1);
           width: 50px;
           height: 50px;
           display: flex;

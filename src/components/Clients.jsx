@@ -49,7 +49,7 @@ export default function Clients() {
     <section className="bg-white py-12">
       <div className="max-w-7xl mx-auto text-center px-6">
         <h2 className="text-4xl font-bold text-gray-900 mb-25">
-          Our Clients
+          Our <span className="text-red-600">Clients</span>
         </h2>
 
         <Slider {...settings}>

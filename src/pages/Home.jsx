@@ -48,7 +48,7 @@ export default function Home() {
       {/* ================= VALUE PROPOSITIONS ================= */}
       <section className="bg-white py-20">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6 tracking-tight">Why Partner With Us</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-6 tracking-tight">Why<span className="text-red-600"> Partner </span> With Us</h2>
           <p className=" text-lg md:text-xl text-gray-600 mb-12">
             Our solutions are designed to deliver measurable results and sustainable growth for your business.
           </p>
@@ -108,7 +108,7 @@ export default function Home() {
       {/* ================= TOP VERTICALS ================= */}
       <section className="py-16 bg-white-50">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4 tracking-tight">Our Top Verticals</h2>
+          <h2 className="text-4xl font-bold text-gray-800 mb-4 tracking-tight">Our <span className="text-red-600"> Top</span> Verticals</h2>
           <p className="text-lg md:text-xl text-gray-600 mb-10">
             We Generate Millions In These Verticals
           </p>
@@ -152,7 +152,7 @@ export default function Home() {
       {/* ================= FOUNDERS ================= */}
       <section className="bg-gray-50 py-20 px-6 md:px-20">
         <h2 className="text-4xl font-bold text-center text-gray-900 mb-12 tracking-tight">
-          Meet Our Founders
+          Meet Our <span className="text-red-600"> Founders</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Himanshu */}
@@ -189,7 +189,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Text */}
           <div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 tracking-tight">Why Secure Media?</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6 tracking-tight">Why <span className="text-red-600">Secure Media?</span></h2>
             <p className="text-gray-600 text-lg leading-relaxed mb-10">
               At Secure Affiliate Media, your success is our success. We are different due to our highly trained and deeply skilled staff. Our experts aren't only smart; they've worked hard for years mastering the art of affiliate and performance marketing industry. All this experience manifests itself in a tangible real-time return that stands on its own merit. We're not speaking about potential; we're about delivering tangible, measurable results that inspire real growth for our partners.
             </p>
@@ -222,7 +222,7 @@ export default function Home() {
       {/* ================= CORE STRENGTHS ================= */}
       <section className="bg-gray-50 py-20 px-6 md:px-20">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 tracking-tight">Our Core Strengths</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4 tracking-tight">Our Core<span className="text-red-600"> Strengths </span></h2>
           <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
             At Secure Affiliate Media, we pride ourselves on the values and capabilities that set us apart in the performance marketing industry.
           </p>
@@ -249,7 +249,7 @@ export default function Home() {
       {/* ================= TESTIMONIALS ================= */}
       <section className="bg-gray-50 py-16">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-10 tracking-tight">Testimonials</h2>
+          <h2 className="text-3xl font-bold text-center text-red-600 mb-10 tracking-tight">Testimonials</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -277,7 +277,7 @@ export default function Home() {
       <section id="contact-form" className="bg-gray-50 py-16 px-6 md:px-20">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
-            Send Us a Message
+            Send Us a <span className="text-red-600">Message</span>
           </h2>
           <form ref={form} onSubmit={sendEmail} className="bg-white p-8 rounded-xl shadow-lg space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
