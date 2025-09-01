@@ -269,7 +269,7 @@ export default function Home() {
           <span className="text-6xl font-extrabold text-red-600 absolute -top-10 left-6 select-none opacity-20">
             &#8220; {/* Left double quote */}
           </span>
-          <span className="text-6xl font-extrabold text-red-600 absolute -bottom-10 right-6 select-none opacity-20">
+          <span className="text-6xl font-extrabold text-red-600 absolute -bottom-8 right-6 select-none opacity-20">
             &#8221; {/* Right double quote */}
           </span>
           <p className="text-gray-700 mb-4 relative z-10">"{t.text}"</p>
