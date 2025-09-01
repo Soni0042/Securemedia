@@ -74,7 +74,7 @@ const PeopleInSAM = () => {
 
   return (
     <section style={styles.section}>
-      <h2 style={styles.heading}>OUR TEAM</h2>
+      <h2 style={styles.heading}>OUR  TEAM</h2>
       <p style={styles.subHeading}>
         Get acquainted with the people who infuse creativity, technology, and passion into our work to craft your digital success.
       </p>

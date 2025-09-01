@@ -46,7 +46,7 @@ export default function SEOService() {
 
       {/* Services Section */}
       <section className="max-w-7xl mx-auto py-20 px-6 md:px-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Our SEO Services</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Our <span className="text-red-600"> SEO</span>  Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {[
             { icon: <FaSearch className="text-red-600 text-4xl mb-4 mx-auto" />, title: "Keyword Research & Strategies", desc: "Analyze industry-specific keywords, create targeted lists, and develop strategies tailored for your business." },
@@ -70,7 +70,7 @@ export default function SEOService() {
 
       {/* Why Choose Us Section */}
       <section className="bg-gray-100 py-20 px-6 md:px-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Why Choose Secure Media?</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Why Choose <span className="text-red-600">Secure Media?</span></h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 max-w-6xl mx-auto">
           {[
             { title: "Result-Oriented", desc: "We focus on measurable KPIs, ensuring SEO strategies deliver tangible results." },

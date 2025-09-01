@@ -246,33 +246,40 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= TESTIMONIALS ================= */}
-      <section className="bg-gray-50 py-16">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center text-red-600 mb-10 tracking-tight">Testimonials</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Rajat Sharma",
-                text: "I recently partnered with Secure Affiliate Media for digital marketing services, and I couldn't be more impressed. From day one, their team has been incredibly professional, responsive, and results-driven. They took the time to understand my business goals and crafted a customized strategy that truly delivered."
-              },
-              {
-                name: "Rohit Choudhary",
-                text: "Secure Affiliate Media did a fantastic job with our Google Ads and Facebook Ads, delivering great leads and ROI. Professional, responsive, and strategic – highly recommend them for anyone serious about growing their business."
-              },
-              {
-                name: "Jahid Ali",
-                text: "This agency expertly handled our Google Ads, Facebook Ads, and social media marketing. Their strategic approach boosted engagement, brand visibility, and quality leads. Professional, responsive, and results-driven – highly recommend for business growth!"
-              }
-            ].map((t, i) => (
-              <div key={i} className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-                <p className="text-gray-700 mb-4">"{t.text}"</p>
-                <h4 className="font-bold text-[#E53935]">{t.name}</h4>
-              </div>
-            ))}
-          </div>
+   {/* ================= TESTIMONIALS ================= */}
+<section className="bg-gray-50 py-16">
+  <div className="max-w-6xl mx-auto px-6">
+    <h2 className="text-3xl font-bold text-center text-red-600 mb-10 tracking-tight">Testimonials</h2>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {[
+        {
+          name: "Rajat Sharma",
+          text: "I recently partnered with Secure Affiliate Media for digital marketing services, and I couldn't be more impressed. From day one, their team has been incredibly professional, responsive, and results-driven. They took the time to understand my business goals and crafted a customized strategy that truly delivered."
+        },
+        {
+          name: "Rohit Choudhary",
+          text: "Secure Affiliate Media did a fantastic job with our Google Ads and Facebook Ads, delivering great leads and ROI. Professional, responsive, and strategic – highly recommend them for anyone serious about growing their business."
+        },
+        {
+          name: "Jahid Ali",
+          text: "This agency expertly handled our Google Ads, Facebook Ads, and social media marketing. Their strategic approach boosted engagement, brand visibility, and quality leads. Professional, responsive, and results-driven – highly recommend for business growth!"
+        }
+      ].map((t, i) => (
+        <div key={i} className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition relative">
+          <span className="text-6xl font-extrabold text-red-600 absolute -top-10 left-6 select-none opacity-20">
+            &#8220; {/* Left double quote */}
+          </span>
+          <span className="text-6xl font-extrabold text-red-600 absolute -bottom-10 right-6 select-none opacity-20">
+            &#8221; {/* Right double quote */}
+          </span>
+          <p className="text-gray-700 mb-4 relative z-10">"{t.text}"</p>
+          <h4 className="font-bold text-[#E53935] relative z-10">{t.name}</h4>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
    {/* ================= CONTACT FORM ================= */}
       <section id="contact-form" className="bg-gray-50 py-16 px-6 md:px-20">
         <div className="max-w-4xl mx-auto">

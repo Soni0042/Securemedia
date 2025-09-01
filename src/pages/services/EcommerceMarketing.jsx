@@ -54,8 +54,8 @@ export default function EcommerceMarketing() {
 
       {/* Services Procedure */}
       <section className="max-w-7xl mx-auto py-20 px-6 md:px-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-red-600">
-          Our E-commerce Marketing Services Procedure
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-black">
+          Our  <span className="text-red-600">E-commerce Marketing </span> Services  Procedure
         </h2>
         <p className="text-center text-gray-700 max-w-3xl mx-auto mb-12">
           We think that the basis of an effective e-commerce marketing plan is a thorough understanding of your company.
@@ -127,7 +127,7 @@ export default function EcommerceMarketing() {
 
       {/* What We Offer */}
       <section className="bg-gray-100 py-20 px-6 md:px-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">What We Offer</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">What We <span className="text-red-600"> Offer </span></h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
           {[
             {

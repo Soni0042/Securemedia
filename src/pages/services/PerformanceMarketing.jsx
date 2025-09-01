@@ -52,7 +52,7 @@ export default function PerformanceMarketing() {
         {/* ================= KEY METRICS SECTION ================= */}
         <section className="py-20 px-6 md:px-20 bg-gray-50 text-black">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-            Key Metrics Indicating Business Performance
+           <span className="text-red-600"> Key Metrics</span> Indicating Business Performance
           </h2>
           <p className="text-lg mb-10 leading-relaxed text-center max-w-3xl mx-auto text-gray-700">
             Effective marketing campaigns rely on precise measurement. At Secure Affiliate Media, we focus on the most vital metrics that make a difference:
@@ -68,7 +68,7 @@ export default function PerformanceMarketing() {
         {/* ================= OFFER SECTION ================= */}
         <section className="py-20 px-6 md:px-20 text-center text-black bg-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            What We Offer
+            What We <span className="text-red-600"> Offer</span>
           </h2>
           <p className="text-lg leading-relaxed max-w-4xl mx-auto text-gray-700 mb-4">
             Our data-driven performance marketing efforts are tailored to help you achieve your specific business goals. 

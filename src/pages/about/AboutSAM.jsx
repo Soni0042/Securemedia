@@ -82,7 +82,7 @@ export default function AboutSAM() {
 
       {/* ================= STORY ================= */}
       <section className="max-w-6xl mx-auto px-6 py-16 text-center">
-        <h2 className="text-3xl font-bold mb-8">Our Story</h2>
+        <h2 className="text-3xl font-bold mb-8">Our <span className="text-red-600"> Story</span></h2>
         <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
           Secure Affiliate Media started its journey focusing on the domestic CPL market. 
           Under strong leadership, we quickly expanded into international markets, which became the turning point of our growth. 
@@ -112,7 +112,7 @@ export default function AboutSAM() {
 
       {/* ================= CORE VALUES ================= */}
       <section className="max-w-6xl mx-auto px-6 py-16">
-        <h2 className="text-3xl font-bold text-center mb-10">Our Core Values</h2>
+        <h2 className="text-3xl font-bold text-center mb-10">Our Core <span className="text-red-600"> Values </span>  </h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
           <div>
             <FaChartLine className="mx-auto text-red-600 text-4xl mb-4" />
@@ -138,7 +138,7 @@ export default function AboutSAM() {
       </section>
 
       {/* ================= TESTIMONIALS ================= */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-gray-50 text-red-600 py-16">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-10">Testimonials</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

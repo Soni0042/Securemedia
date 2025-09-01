@@ -104,7 +104,7 @@ const Affiliate = () => {
       <section className="py-20 px-6 md:px-20 bg-gray-50 text-black">
         <div className="max-w-6xl mx-auto text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            How Affiliates Work
+            How  <span className="text-red-600">Affiliates</span> Work
           </h2>
           <p className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto">
             Follow these steps to start earning through affiliate marketing:
@@ -128,7 +128,7 @@ const Affiliate = () => {
       {/* ================= PUBLISHERS ================= */}
       <section className="py-20 px-6 md:px-20 bg-white text-center">
         <h2 className="text-4xl font-bold mb-6 text-gray-800">
-          SAM for Publishers
+          <span className="text-red-600">SAM</span> for <span className="text-red-600">Publishers</span>
         </h2>
         <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
           Together, we can promote ads, maintain traffic, and assist you in
@@ -172,7 +172,7 @@ const Affiliate = () => {
       {/* ================= ADVERTISERS ================= */}
       <section className="py-20 px-6 md:px-20 bg-gray-50 text-center">
         <h2 className="text-4xl font-bold mb-6 text-gray-800">
-          SAM for Advertisers
+          <span className="text-red-600"> SAM</span> for<span className="text-red-600">   Advertisers</span>
         </h2>
         <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
           Our media buying team helps companies achieve results and boost their

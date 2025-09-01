@@ -50,7 +50,7 @@ export default function EmailMarketing() {
 
       {/* Why Email Marketing */}
       <section className="max-w-6xl mx-auto px-6 py-20 md:px-16">
-        <h2 className="text-3xl font-bold mb-12 text-center text-gray-800">Why Choose Email Marketing?</h2>
+        <h2 className="text-3xl font-bold mb-12 text-center text-gray-800">Why Choose <span className="text-red-600"> Email Marketing? </span></h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition text-center">
             <FaChartLine className="mx-auto text-red-600 text-4xl mb-4" />
@@ -85,7 +85,7 @@ export default function EmailMarketing() {
 
       {/* Our Strategy */}
       <section className="bg-gray-100 py-20 px-6 md:px-16">
-        <h2 className="text-3xl font-bold mb-12 text-center text-gray-800">Our Email Marketing Strategy</h2>
+        <h2 className="text-3xl font-bold mb-12 text-center text-gray-800">Our Email Marketing  <span className="text-red-600">Strategy </span></h2>
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
           <div className="flex items-start gap-4">
             <FaClipboardList className="text-red-600 text-3xl mt-1" />

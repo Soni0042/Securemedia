@@ -107,7 +107,7 @@ export default function Contact() {
       <section id="contact-form" className="py-16">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
-            Send Us a Message
+            Send Us a  <span className="text-red-600">Message</span>
           </h2>
           <form ref={form} onSubmit={sendEmail} className="bg-white p-8 rounded-xl shadow-lg space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -146,7 +146,7 @@ export default function Contact() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 md:px-12">
           <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
-            Our Office Location
+            Our Office <span className="text-red-600"> Location </span>
           </h2>
           <div className="overflow-hidden rounded-2xl border border-gray-200">
             <iframe
