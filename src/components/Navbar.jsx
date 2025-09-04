@@ -50,13 +50,14 @@ export default function Navbar() {
           </li>
           <NavDropdown
             label="Services"
+            isOpen={dropdownOpen["services"]}
+            onToggle={() => handleDropdownToggle("services")}
             links={[
               { to: "/services/affiliate-marketing", label: "Affiliate Marketing" },
               { to: "/services/performance-marketing", label: "Performance Marketing" },
               { to: "/services/seo", label: "SEO" },
               { to: "/services/email-marketing", label: "Email Marketing" },
               { to: "/services/ecommerce-marketing", label: "Ecommerce Marketing" },
-              // { to: "/services/lead-generation", label: "Lead Generation" },
             ]}
           />
           <li>
@@ -67,24 +68,29 @@ export default function Navbar() {
           </li>
           <NavDropdown
             label="Gallery"
+            isOpen={dropdownOpen["gallery"]}
+            onToggle={() => handleDropdownToggle("gallery")}
             links={[
               { to: "/gallery/in-house", label: "In-House" },
               { to: "/gallery/event", label: "Event" },
             ]}
           />
+          <li>
+            <Link to="/people-in-sam" className="hover:text-[#E53935]">SAM's Workforce</Link>
+          </li>
           <NavDropdown
-            label="SAM's Workforce"
+            label="Login"
+            isOpen={dropdownOpen["login"]}
+            onToggle={() => handleDropdownToggle("login")}
             links={[
-              { to: "/people-in-sam", label: "Our Team" },
-              // { to: "#", label: "Careers" },
+              { to: "/login/advertiser", label: "Advertiser" },
+              { to: "/login/publisher", label: "Publisher" },
             ]}
           />
         </ul>
 
         {/* Mobile menu overlay */}
-        {menuOpen && (
-          <div className="fixed inset-0 bg-black/30 z-40" onClick={closeAll}></div>
-        )}
+        {menuOpen && <div className="fixed inset-0 bg-black/30 z-40" onClick={closeAll}></div>}
 
         {/* Mobile sliding menu */}
         <div
@@ -102,14 +108,10 @@ export default function Navbar() {
 
           <ul className="flex flex-col space-y-2 mt-20 px-7">
             <li>
-              <Link to="/" className="block py-3 hover:text-[#E53935]" onClick={closeAll}>
-                Home
-              </Link>
+              <Link to="/" className="block py-3 hover:text-[#E53935]" onClick={closeAll}>Home</Link>
             </li>
             <li>
-              <Link to="/about-us" className="block py-3 hover:text-[#E53935]" onClick={closeAll}>
-                About Us
-              </Link>
+              <Link to="/about-us" className="block py-3 hover:text-[#E53935]" onClick={closeAll}>About Us</Link>
             </li>
 
             <li>
@@ -119,11 +121,7 @@ export default function Navbar() {
                 onClick={() => handleDropdownToggle("services")}
               >
                 <span>Services</span>
-                <FaChevronDown
-                  className={`ml-2 transform transition ${
-                    dropdownOpen["services"] ? "rotate-180" : ""
-                  }`}
-                />
+                <FaChevronDown className={`ml-2 transform transition ${dropdownOpen["services"] ? "rotate-180" : ""}`} />
               </button>
               {dropdownOpen["services"] && (
                 <ul className="ml-4 mt-1 space-y-1">
@@ -132,21 +130,16 @@ export default function Navbar() {
                   <li><Link to="/services/seo" className="block py-2 hover:text-[#E53935]" onClick={closeAll}>SEO</Link></li>
                   <li><Link to="/services/email-marketing" className="block py-2 hover:text-[#E53935]" onClick={closeAll}>Email Marketing</Link></li>
                   <li><Link to="/services/ecommerce-marketing" className="block py-2 hover:text-[#E53935]" onClick={closeAll}>Ecommerce Marketing</Link></li>
-                  {/* <li><Link to="/services/lead-generation" className="block py-2 hover:text-[#E53935]" onClick={closeAll}>Lead Generation</Link></li> */}
                 </ul>
               )}
             </li>
 
             <li>
-              <Link to="/contact-us" className="block py-3 hover:text-[#E53935]" onClick={closeAll}>
-                Contact Us
-              </Link>
+              <Link to="/contact-us" className="block py-3 hover:text-[#E53935]" onClick={closeAll}>Contact Us</Link>
             </li>
 
             <li>
-              <Link to="/blog" className="block py-3 hover:text-[#E53935]" onClick={closeAll}>
-                Blog
-              </Link>
+              <Link to="/blog" className="block py-3 hover:text-[#E53935]" onClick={closeAll}>Blog</Link>
             </li>
 
             <li>
@@ -156,11 +149,7 @@ export default function Navbar() {
                 onClick={() => handleDropdownToggle("gallery")}
               >
                 <span>Gallery</span>
-                <FaChevronDown
-                  className={`ml-2 transform transition ${
-                    dropdownOpen["gallery"] ? "rotate-180" : ""
-                  }`}
-                />
+                <FaChevronDown className={`ml-2 transform transition ${dropdownOpen["gallery"] ? "rotate-180" : ""}`} />
               </button>
               {dropdownOpen["gallery"] && (
                 <ul className="ml-4 mt-1 space-y-1">
@@ -171,22 +160,22 @@ export default function Navbar() {
             </li>
 
             <li>
+              <Link to="/people-in-sam" className="block py-3 hover:text-[#E53935]" onClick={closeAll}>SAM's Workforce</Link>
+            </li>
+
+            <li>
               <button
                 type="button"
                 className="w-full flex justify-between items-center py-3 hover:text-[#E53935]"
-                onClick={() => handleDropdownToggle("sam")}
+                onClick={() => handleDropdownToggle("login")}
               >
-                <span>SAM's Workforce</span>
-                <FaChevronDown
-                  className={`ml-2 transform transition ${
-                    dropdownOpen["sam"] ? "rotate-180" : ""
-                  }`}
-                />
+                <span>Login</span>
+                <FaChevronDown className={`ml-2 transform transition ${dropdownOpen["login"] ? "rotate-180" : ""}`} />
               </button>
-              {dropdownOpen["sam"] && (
+              {dropdownOpen["login"] && (
                 <ul className="ml-4 mt-1 space-y-1">
-                  <li><Link to="/people-in-sam" className="block py-2 hover:text-[#E53935]" onClick={closeAll}>Our Team</Link></li>
-                  {/* <li><Link to="#" className="block py-2 hover:text-[#E53935]" onClick={closeAll}>Careers</Link></li> */}
+                  <li><Link to="/login/advertiser" className="block py-2 hover:text-[#E53935]" onClick={closeAll}>Advertiser</Link></li>
+                  <li><Link to="/login/publisher" className="block py-2 hover:text-[#E53935]" onClick={closeAll}>Publisher</Link></li>
                 </ul>
               )}
             </li>
@@ -197,13 +186,24 @@ export default function Navbar() {
   );
 }
 
-function NavDropdown({ label, links }) {
+function NavDropdown({ label, links, isOpen, onToggle }) {
   return (
-    <li className="relative group">
+    <li
+      className="relative group"
+      // Touch devices won't respect hover, so onClick toggles open state
+      onClick={(e) => {
+        // Prevent link clicks inside ul from toggling dropdown
+        if (e.target.tagName !== "A") onToggle();
+      }}
+    >
       <span className="flex items-center hover:text-[#E53935] cursor-pointer select-none">
         {label} <FaChevronDown className="ml-1 text-xs" />
       </span>
-      <ul className="absolute left-0 top-full w-56 bg-white border border-gray-200 hidden group-hover:block rounded shadow-lg z-50">
+      {/* CSS hover reveals dropdown on desktop; isOpen controls click/tap */}
+      <ul
+        className={`absolute left-0 top-full w-56 bg-white border border-gray-200 rounded shadow-lg z-50
+          ${isOpen ? "block" : "hidden"} group-hover:block`}
+      >
         {links.map((link) => (
           <li key={link.to}>
             <Link to={link.to} className="block px-4 py-2 hover:bg-gray-100">
