@@ -1,23 +1,26 @@
 import React from "react";
 
 const teamMembers = [
-  { name: "Amit Bisht", role: "Sr. Website Developer" },
-  { name: "Rishab", role: "Affiliate Marketing Executive" },
-  { name: "MD Wahid", role: "Affiliate Marketing Manager" },
-  { name: "Rachi Jangidd", role: "Sr. Digital Marketer" },
-  { name: "Sparsh Goyal", role: "Digital Marketing Executive" },
-  { name: "Jitesh Kumar", role: "Affiliate Marketing Executive" },
-  { name: "Aditya Bishwakarma", role: "Digital Marketing Executive" },
-  { name: "Abhishek Kumar", role: "Affiliate Marketing Executive" },
-  { name: "Saloni Dotiyal", role: "Affiliate Marketing Executive" },
-  { name: "Irshad Qureshi", role: "Digital Marketing Executive" },
-  { name: "Neeraj Sharma", role: "Affiliate Marketing Executive" },
+  {  role: "Sales Manager-International & Domestic", image: "/akshit.png" },
+  {  role: "Sales Manager", image: "/wahid.png" },
+   {  role: "Affiliate Marketing Manager", image: "/rishabh.png" },
+  {  role: "Sr.Digital Marketer", image: "/rachi.png" },
+   {  role: "Affiliate Marketing Executive", image: "/abhishek.png" },
+  {  role: "Affiliate Marketing Executive", image: "/jitesh.png" },
+  {  role: "Digital Marketing Executive", image: "/aditya.png" },
+  {  role: "Digital Marketing Executive", image: "/irshad.png" },
+  {  role: "Web Developer", image: "/piyush.png" },
+  {  role: "Affiliate Marketing Executive ", image: "/manshi.png" },
+  {  role: "Affiliate Marketing Executive", image: "/priyanshu.png" },
+  {  role: "Digital Marketing Intern", image: "/kajal.png" },
+  {  role: "Digital Marketing Intern", image: "/sandeep.png" },
+  
 ];
 
 const styles = {
   section: {
     padding: "60px 20px",
-    maxWidth: 1000,
+    maxWidth: 1100,
     margin: "0 auto",
     fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
     color: "#333",
@@ -40,22 +43,31 @@ const styles = {
   },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
     gap: 30,
   },
   card: {
-    padding: 25,
     borderRadius: 12,
     backgroundColor: "#ffffff",
     boxShadow: "0 4px 15px rgba(0, 0, 0, 0.1)",
     textAlign: "center",
     transition: "transform 0.3s ease, box-shadow 0.3s ease",
     cursor: "default",
+    overflow: "hidden",
   },
   cardHover: {
     transform: "translateY(-8px)",
     boxShadow: "0 8px 25px rgba(0, 0, 0, 0.15)",
     cursor: "pointer",
+  },
+  image: {
+    width: "100%",
+    height: "auto",   // keeps original square look (600x600)
+    objectFit: "cover",
+    display: "block",
+  },
+  content: {
+    padding: 20,
   },
   name: {
     fontSize: "1.25rem",
@@ -74,7 +86,10 @@ const PeopleInSAM = () => {
 
   return (
     <section style={styles.section}>
-      <h2 style={styles.heading}>OUR  TEAM</h2>
+      
+      <h1 className="text-4xl text-center md:text-5xl   mb-4"> OUR <span className="text-red-600">TEAM
+        </span>
+      </h1>
       <p style={styles.subHeading}>
         Get acquainted with the people who infuse creativity, technology, and passion into our work to craft your digital success.
       </p>
@@ -89,8 +104,11 @@ const PeopleInSAM = () => {
             onMouseEnter={() => setHoveredIndex(idx)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
-            <div style={styles.name}>{member.name}</div>
-            <div style={styles.role}>{member.role}</div>
+            <img src={member.image} alt={member.name} style={styles.image} />
+            <div style={styles.content}>
+              <div style={styles.name}>{member.name}</div>
+              <div style={styles.role}>{member.role}</div>
+            </div>
           </div>
         ))}
       </div>
