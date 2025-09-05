@@ -16,6 +16,7 @@ import SEO from "./pages/services/SEO";
 import EmailMarketing from "./pages/services/EmailMarketing";
 import EcommerceMarketing from "./pages/services/EcommerceMarketing";
 import PeopleInSAM from "./pages/PeopleInSAM";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 
 
@@ -41,6 +42,9 @@ export default function App() {
         <Route path="/services/email-marketing" element={<EmailMarketing/>} />
         <Route path="/services/ecommerce-marketing" element={<EcommerceMarketing/>} />
         <Route path="/people-in-sam" element={<PeopleInSAM/>} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
+        
+        
         
 
         
