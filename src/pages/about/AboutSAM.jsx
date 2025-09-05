@@ -138,36 +138,47 @@ export default function AboutSAM() {
       </section>
 
       {/* ================= TESTIMONIALS ================= */}
-      <section className="bg-gray-50 text-red-600 py-16">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-10">Testimonials</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Samantha Milner",
-                company: "Mindful LLC",
-                text: "We now have a fantastic website that perfectly encapsulates our company thanks to them. Their service has exceeded expectations."
-              },
-              {
-                name: "Mike Johnson",
-                company: "DEF Technologies",
-                text: "Our company now has a state-of-the-art website that is easy to navigate. Their digital marketing expertise is undeniable."
-              },
-              {
-                name: "Emma Smith",
-                company: "GHI Industries",
-                text: "Extremely knowledgeable, professional, and quick to respond. An outstanding digital partner for us."
-              }
-            ].map((t, i) => (
-              <div key={i} className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-                <p className="text-gray-700 mb-4">"{t.text}"</p>
-                <h4 className="font-bold text-red-600">{t.name}</h4>
-                <p className="text-sm text-gray-500">{t.company}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+<section className="bg-gray-50 py-16">
+  <div className="max-w-6xl mx-auto px-6">
+    <h2 className="text-3xl font-bold text-center text-red-600 mb-10 tracking-tight">Testimonials</h2>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition relative">
+        <span className="text-6xl font-extrabold text-red-600 absolute -top-10 left-6 select-none opacity-20">
+          &#8220; {/* Left double quote */}
+        </span>
+        <span className="text-6xl font-extrabold text-red-600 absolute -bottom-8 right-6 select-none opacity-20">
+          &#8221; {/* Right double quote */}
+        </span>
+        <p className="text-gray-700 mb-4 relative z-10">"We now have a fantastic website that perfectly encapsulates our company thanks to them. Their service has exceeded expectations."</p>
+        <h4 className="font-bold text-[#E53935] relative z-10">Samantha Milner</h4>
+        <p className="text-[#E53935] relative z-10 font-semibold">Mindful LLC</p>
+      </div>
+      <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition relative">
+        <span className="text-6xl font-extrabold text-red-600 absolute -top-10 left-6 select-none opacity-20">
+          &#8220;
+        </span>
+        <span className="text-6xl font-extrabold text-red-600 absolute -bottom-8 right-6 select-none opacity-20">
+          &#8221;
+        </span>
+        <p className="text-gray-700 mb-4 relative z-10">"Our company now has a state-of-the-art website that is easy to navigate. Their digital marketing expertise is undeniable."</p>
+        <h4 className="font-bold text-[#E53935] relative z-10">Mike Johnson</h4>
+        <p className="text-[#E53935] relative z-10 font-semibold">DEF Technologies</p>
+      </div>
+      <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition relative">
+        <span className="text-6xl font-extrabold text-red-600 absolute -top-10 left-6 select-none opacity-20">
+          &#8220;
+        </span>
+        <span className="text-6xl font-extrabold text-red-600 absolute -bottom-8 right-6 select-none opacity-20">
+          &#8221;
+        </span>
+        <p className="text-gray-700 mb-4 relative z-10">"Extremely knowledgeable, professional, and quick to respond. An outstanding digital partner for us."</p>
+        <h4 className="font-bold text-[#E53935] relative z-10">Emma Smith</h4>
+        <p className="text-[#E53935] relative z-10 font-semibold">GHI Industries</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       <Footer />
     </div>
