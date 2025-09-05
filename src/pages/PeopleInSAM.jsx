@@ -13,8 +13,8 @@ const teamMembers = [
   { role: "Web Developer", image: "/piyush.png" },
   { role: "Affiliate Marketing Executive ", image: "/manshi.png" },
   { role: "Affiliate Marketing Executive", image: "/priyanshu.png" },
-  { role: "Digital Marketing Intern", image: "/kajal.png" },
-  { role: "Digital Marketing Intern", image: "/sandeep.png" },
+  { role: "Digital Marketing Executive", image: "/kajal.png" },
+  { role: "Digital Marketing Executive", image: "/sandeep.png" },
 ];
 
 const styles = {
