@@ -9,7 +9,7 @@ const schemaData = [
     "provider": {
       "@type": "Organization",
       "name": "The Secure Media",
-      "url": "https://thesecuremedia.com/services/affiliate-marketing"
+      "url": "https://www.thesecuremedia.com"
     },
     "areaServed": "IN"
   },
@@ -21,17 +21,24 @@ const schemaData = [
     "provider": {
       "@type": "Organization",
       "name": "The Secure Media",
-      "url": "https://thesecuremedia.com/services/performance-marketing"
+      "url": "https://www.thesecuremedia.com"
     },
     "areaServed": "IN"
   },
   {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    "url": "https://thesecuremedia.com/contact-us",
+    "url": "https://www.thesecuremedia.com/contact-us",
     "name": "Contact Us",
     "description": "Contact The Secure Media for inquiries, support, or feedback."
   },
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "url": "https://www.thesecuremedia.com/about-us",
+    "name": "About Us",
+    "description": "Learn more about The Secure Media, our team, and our mission."
+  }
 ];
 
 const SchemaMarkup = () => {
