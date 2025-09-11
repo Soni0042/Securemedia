@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 export default function Blog() {
@@ -26,81 +27,99 @@ export default function Blog() {
   }, []);
 
   if (loading) {
-    return <p className="text-center mt-12 text-gray-500">Loading posts...</p>;
+    return (
+      <p
+        className="text-center mt-16 text-gray-500 text-base"
+        role="status"
+        aria-live="polite"
+      >
+        Loading blog posts...
+      </p>
+    );
   }
 
   if (error) {
     return (
-      <p className="text-center mt-12 text-red-500">
+      <p
+        className="text-center mt-16 text-red-600 font-semibold text-base"
+        role="alert"
+      >
         Error loading posts: {error}
       </p>
     );
   }
 
   return (
-    <section className="max-w-6xl mx-auto px-6 py-12 font-sans">
-      <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center text-gray-800">
-        Blog
+    <main className="max-w-5xl mx-auto px-4 py-12 font-sans">
+      <h1 className="text-3xl md:text-4xl font-bold mb-10 text-center text-gray-900 tracking-tight">
+        Our Blog
       </h1>
 
       {posts.length === 0 ? (
-        <p className="text-center text-gray-500">No blog posts found.</p>
+        <p className="text-center text-gray-500 text-base mt-20">
+          No blog posts found.
+        </p>
       ) : (
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <section
+          className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+          aria-label="Blog posts"
+        >
           {posts.map((post) => {
             const featuredImage =
               post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
 
             return (
-              <motion.div
+              <motion.article
                 key={post.id}
-                whileHover={{ scale: 1.03 }}
-                transition={{ type: "spring", stiffness: 200 }}
+                whileHover={{ scale: 1.02, boxShadow: "0 6px 14px rgba(0,0,0,0.1)" }}
+                transition={{ type: "spring", stiffness: 250, damping: 20 }}
+                className="rounded-2xl bg-white shadow-sm flex flex-col overflow-hidden focus-within:ring-2 focus-within:ring-blue-500"
+                tabIndex={0}
+                aria-labelledby={`post-title-${post.id}`}
               >
-                <article className="overflow-hidden shadow-lg rounded-2xl bg-white flex flex-col h-full">
-                  {featuredImage && (
-                    <img
-                      src={featuredImage}
-                      alt={post.title.rendered}
-                      className="w-full h-48 object-cover"
-                    />
-                  )}
-                  <div className="p-6 flex flex-col flex-grow">
-                    <h2
-                      className="text-2xl font-semibold mb-2 text-gray-900"
-                      dangerouslySetInnerHTML={{ __html: post.title.rendered }}
-                    />
-                    <div
-                      className="text-gray-600 mb-4 flex-grow"
-                      dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
-                    />
-                    <div className="flex justify-between items-center text-sm text-gray-500 mb-4">
-                      <time dateTime={post.date}>
-                        {new Date(post.date).toLocaleDateString("en-US", {
-                          year: "numeric",
-                          month: "short",
-                          day: "numeric",
-                        })}
-                      </time>
-                      {post.yoast_head_json?.author && (
-                        <span>By {post.yoast_head_json.author}</span>
-                      )}
-                    </div>
-                    <a
-                      href={post.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block bg-blue-600 text-white text-center font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
-                    >
-                      Read More
-                    </a>
+                {featuredImage && (
+                  <img
+                    src={featuredImage}
+                    alt={`Featured image for ${post.title.rendered.replace(/<\/?[^>]+(>|$)/g, "")}`}
+                    className="w-full h-40 object-cover rounded-t-2xl"
+                    loading="lazy"
+                  />
+                )}
+                <div className="p-5 flex flex-col flex-grow">
+                  <h2
+                    id={`post-title-${post.id}`}
+                    className="text-xl font-semibold mb-2 text-gray-900 line-clamp-2"
+                    dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+                  />
+                  <div
+                    className="text-gray-700 mb-5 flex-grow overflow-hidden line-clamp-4 text-sm"
+                    dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
+                  />
+                  <div className="flex justify-between items-center text-xs text-gray-500 mb-5">
+                    <time dateTime={post.date}>
+                      {new Date(post.date).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      })}
+                    </time>
+                    {post.yoast_head_json?.author && (
+                      <span>By {post.yoast_head_json.author}</span>
+                    )}
                   </div>
-                </article>
-              </motion.div>
+                  <Link
+                    to={`/blog/${post.id}`}
+                    className="mt-auto inline-block rounded-full bg-red-600 px-5 py-2 text-center font-medium text-white transition-colors hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 text-sm"
+                    aria-label={`Read more about ${post.title.rendered.replace(/<\/?[^>]+(>|$)/g, "")}`}
+                  >
+                    Read More
+                  </Link>
+                </div>
+              </motion.article>
             );
           })}
-        </div>
+        </section>
       )}
-    </section>
+    </main>
   );
 }

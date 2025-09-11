@@ -15,6 +15,7 @@ import EcommerceMarketing from "./pages/services/EcommerceMarketing";
 import PeopleInSAM from "./pages/PeopleInSAM";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 
 export default function App() {
   return (
@@ -40,6 +41,7 @@ export default function App() {
         <Route path="/people-in-sam" element={<PeopleInSAM />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<BlogPost />} />
       </Routes>
        
       
