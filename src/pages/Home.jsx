@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState,useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaGamepad, FaShoppingCart, FaPlane, FaHome, FaMoneyBillWave, FaLeaf } from "react-icons/fa";
 import NumbersMatter from "../components/NumbersMatter";
@@ -8,6 +8,8 @@ import emailjs from "@emailjs/browser";
 import Clients from "../components/Clients";
 import BannerSlider from "../components/BannerSlider";
 
+
+
 export default function Home() {
   const navigate = useNavigate();
   
@@ -15,6 +17,35 @@ export default function Home() {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
   };
+  const rotatingWords = ["Performance", "Affiliate", "Digital"];
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [displayedText, setDisplayedText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    let typingSpeed = 200;
+    let timeout;
+
+    const fullText = rotatingWords[currentWordIndex];
+
+    if (!isDeleting) {
+      setDisplayedText(fullText.substring(0, displayedText.length + 1));
+      if (displayedText === fullText) {
+        timeout = setTimeout(() => setIsDeleting(true), 1500);
+      } else {
+        timeout = setTimeout(() => {}, typingSpeed);
+      }
+    } else {
+      setDisplayedText(fullText.substring(0, displayedText.length - 1));
+      if (displayedText === "") {
+        setIsDeleting(false);
+        setCurrentWordIndex((prev) => (prev + 1) % rotatingWords.length);
+      }
+      timeout = setTimeout(() => {}, typingSpeed / 2);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [displayedText, isDeleting, currentWordIndex, rotatingWords]);
 
   // Contact Form states and refs
   const form = useRef();
@@ -41,46 +72,68 @@ export default function Home() {
 
   return (
     <div className="bg-white text-black font-sans min-h-screen leading-relaxed">
-     
- {/* Hero Section */}
-      <section className="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto py-16 px-6 md:px-12 gap-8">
-        {/* Left: Text Content */}
-        <motion.div
-          className="w-full md:w-1/2"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeUp}
-        >
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-5 leading-tight text-gray-900">
-            Performance Marketing Company
-          </h1>
-          <p className="text-lg md:text-xl text-gray-700 mb-6">
-            Unleash your performance with Secure Affiliate Media..
-          </p>
-          <p className="text-blue-600 font-semibold tracking-widest mb-10">
-            _______Estb. 2019_______
-          </p>
-          <button
-            onClick={() => navigate("/contact")}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition"
-            aria-label="Contact Us"
-          >
-            Contact Us
-          </button>
-        </motion.div>
+    {/* Hero Section */}
+<section className="flex flex-col md:flex-row items-start justify-between max-w-7xl mx-auto py-25 px-6 md:px-12 gap-12">
+  {/* Left: Text Content */}
+  <motion.div
+    className="w-full md:w-1/2  py-9"
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+  >
+    <h1 className="text-5xl md:text-6xl  mb-6 leading-tight text-gray-900">
+      <span
+        className="text-red-600 inline-block"
+        style={{ width: "13ch", whiteSpace: "nowrap" }}
+      >
+        {displayedText}
+      </span>
+      <br />
+      <span className="text-gray-900">Marketing Company</span>
+    </h1>
 
-        {/* Right: Banner Slider */}
-        <motion.div
-          className="w-full md:w-1/2"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeUp}
-        >
-          <BannerSlider />
-        </motion.div>
-      </section>
+    <p className="text-lg md:text-xl text-gray-700 mb-6 max-w-lg leading-relaxed">
+      Unleash your <span className="font-semibold text-gray-900">performance</span> with 
+      <span className="text-red-600 font-semibold"> Secure Affiliate Media</span> – 
+      helping brands grow with data-driven campaigns.
+    </p>
+
+    <p className="text-red-600 font-semibold tracking-widest mb-10 text-sm uppercase">
+      —— Estb. 2019 ——
+    </p>
+
+    {/* Buttons */}
+    <div className="flex flex-wrap gap-4">
+      <button
+        onClick={() => navigate("/contact-us")}
+        className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full font-semibold shadow-md transition-transform transform hover:scale-105"
+        aria-label="Contact Us"
+      >
+        Contact Us
+      </button>
+      <button
+        onClick={() => navigate("about-us")}
+        className="bg-white border border-red-600 text-red-600 rounded-full px-8 py-3 font-semibold shadow-sm hover:bg-white transition-transform transform hover:scale-105"
+        aria-label="Learn More"
+      >
+        Learn More
+      </button>
+    </div>
+  </motion.div>
+
+  {/* Right: Banner Slider */}
+  <motion.div
+    className="w-full  " style={{maxWidth:"500px"}}
+    initial={{ opacity: 0, scale: 0.9 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.8, delay: 0.2 }}
+  >
+    <BannerSlider />
+  </motion.div>
+</section>
+
 
 
       {/* ================= VALUE PROPOSITIONS ================= */}
