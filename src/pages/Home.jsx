@@ -23,29 +23,35 @@ export default function Home() {
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    let typingSpeed = 200;
-    let timeout;
+  let typingSpeed = 50; // milliseconds
+  let timeout;
 
-    const fullText = rotatingWords[currentWordIndex];
+  const fullText = rotatingWords[currentWordIndex];
 
-    if (!isDeleting) {
-      setDisplayedText(fullText.substring(0, displayedText.length + 1));
-      if (displayedText === fullText) {
-        timeout = setTimeout(() => setIsDeleting(true), 2500);
-      } else {
-        timeout = setTimeout(() => {}, typingSpeed);
-      }
+  if (!isDeleting) {
+    if (displayedText.length < fullText.length) {
+      timeout = setTimeout(() => {
+        setDisplayedText(fullText.substring(0, displayedText.length + 1));
+      }, typingSpeed);
     } else {
-      setDisplayedText(fullText.substring(0, displayedText.length - 1));
-      if (displayedText === "") {
-        setIsDeleting(false);
-        setCurrentWordIndex((prev) => (prev + 1) % rotatingWords.length);
-      }
-      timeout = setTimeout(() => {}, typingSpeed / 2);
+      timeout = setTimeout(() => {
+        setIsDeleting(true);
+      }, 2500);
     }
+  } else {
+    if (displayedText.length > 0) {
+      timeout = setTimeout(() => {
+        setDisplayedText(fullText.substring(0, displayedText.length - 1));
+      }, typingSpeed / 2);
+    } else {
+      setIsDeleting(false);
+      setCurrentWordIndex((prev) => (prev + 1) % rotatingWords.length);
+    }
+  }
 
-    return () => clearTimeout(timeout);
-  }, [displayedText, isDeleting, currentWordIndex, rotatingWords]);
+  return () => clearTimeout(timeout);
+}, [displayedText, isDeleting, currentWordIndex, rotatingWords]);
+
 
   // Contact Form states and refs
   const form = useRef();
