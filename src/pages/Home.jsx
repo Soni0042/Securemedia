@@ -31,7 +31,7 @@ export default function Home() {
     if (!isDeleting) {
       setDisplayedText(fullText.substring(0, displayedText.length + 1));
       if (displayedText === fullText) {
-        timeout = setTimeout(() => setIsDeleting(true), 1500);
+        timeout = setTimeout(() => setIsDeleting(true), 2500);
       } else {
         timeout = setTimeout(() => {}, typingSpeed);
       }
