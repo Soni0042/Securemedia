@@ -42,7 +42,45 @@ export default function Home() {
   return (
     <div className="bg-white text-black font-sans min-h-screen leading-relaxed">
      
- <BannerSlider />
+ {/* Hero Section */}
+      <section className="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto py-16 px-6 md:px-12 gap-8">
+        {/* Left: Text Content */}
+        <motion.div
+          className="w-full md:w-1/2"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+        >
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-5 leading-tight text-gray-900">
+            Performance Marketing Company
+          </h1>
+          <p className="text-lg md:text-xl text-gray-700 mb-6">
+            Unleash your performance with Secure Affiliate Media..
+          </p>
+          <p className="text-blue-600 font-semibold tracking-widest mb-10">
+            _______Estb. 2019_______
+          </p>
+          <button
+            onClick={() => navigate("/contact")}
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition"
+            aria-label="Contact Us"
+          >
+            Contact Us
+          </button>
+        </motion.div>
+
+        {/* Right: Banner Slider */}
+        <motion.div
+          className="w-full md:w-1/2"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+        >
+          <BannerSlider />
+        </motion.div>
+      </section>
 
 
       {/* ================= VALUE PROPOSITIONS ================= */}
