@@ -1,5 +1,4 @@
-import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import React, { useState } from "react";
 import {
   FaPhoneAlt,
   FaEnvelope,
@@ -13,33 +12,11 @@ import Footer from "../../components/Footer";
 import { motion } from "framer-motion";
 
 export default function Contact() {
-  const form = useRef();
-  const [resultMessage, setResultMessage] = useState("");
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_jqebicj",      // Replace with your EmailJS Service ID
-        "template_wp03vjk",     // Replace with your EmailJS Template ID
-        form.current,
-        "cUHFy_7JRJgi-veRT"       // Replace with your EmailJS Public Key
-      )
-      .then(
-        () => {
-          setResultMessage("Message sent successfully!");
-          e.target.reset(); // Clear form after successful submission
-        },
-        () => {
-          setResultMessage("Failed to send the message. Please try again.");
-        }
-      );
-  };
+  const [resultMessage, setResultMessage] = useState(""); // Optional: you can remove this if not needed
 
   return (
     <div className="bg-white text-gray-800 font-sans flex flex-col min-h-screen">
-      {/* Hero, Contact Info Cards, Social Icons as you had them */}
+      {/* Hero, Contact Info Cards, Social Icons etc. unchanged */}
       <section className="relative w-full min-h-screen bg-gradient-to-r from-red-800 to-red-600 text-white flex items-center py-10 md:py-0">
         <div className="max-w-6xl mx-auto px-6 md:px-20 flex flex-col md:grid md:grid-cols-2 items-center gap-10">
           <div className="text-center md:text-left">
@@ -107,9 +84,14 @@ export default function Contact() {
       <section id="contact-form" className="py-16">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
-            Send Us a  <span className="text-red-600">Message</span>
+            Send Us a  <span className="text-red-600">Message</span>
           </h2>
-          <form ref={form} onSubmit={sendEmail} className="bg-white p-8 rounded-xl shadow-lg space-y-6">
+          <form
+            action="https://formsubmit.co/support@thesecuremedia.com"
+            method="POST"
+            className="bg-white p-8 rounded-xl shadow-lg space-y-6"
+          >
+            {/* Form fields unchanged */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <InputField label="First Name" placeholder="Enter your first name" name="first_name" />
               <InputField label="Last Name" placeholder="Enter your last name" name="last_name" />
@@ -129,6 +111,11 @@ export default function Contact() {
                 className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-red-600"
               />
             </div>
+
+            {/* Optional hidden fields for success redirect & captcha */}
+            <input type="hidden" name="_captcha" value="false" />
+            
+
             <button
               type="submit"
               className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium transition w-full"
@@ -142,7 +129,7 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Google Maps Section */}
+      {/* Google Maps Section unchanged */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 md:px-12">
           <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
