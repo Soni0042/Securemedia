@@ -1,35 +1,31 @@
-// src/components/NumbersMatter.jsx
+import React, { memo } from "react";
 import CountUp from "react-countup";
 
-export default function NumbersMatter() {
-  const stats = [
-    { label: "Experience", value: 6, suffix: "+" },
-    { label: "Team", value: 30, suffix: "+" },
-    { label: "Clients", value: 100, suffix: "+" },
-    { label: "Monthly Conversion", value: 1000000, suffix: "+" },
-  ];
+const stats = [
+  { label: "Experience", value: 6, suffix: "+" },
+  { label: "Team", value: 30, suffix: "+" },
+  { label: "Clients", value: 100, suffix: "+" },
+  { label: "Monthly Conversion", value: 1000000, suffix: "+" },
+];
 
-  // Formatter to show millions during animation
-  const formatMillions = (num) => {
-    if (num >= 0) {
-      return (num / 1000000).toFixed(1).replace(/\.0$/, "") + "M";
-    }
-    return num;
-  };
+const formatValue = (num, label) => {
+  if (label === "Monthly Conversion") {
+    return (num / 1000000).toFixed(1).replace(/\.0$/, "") + "M";
+  }
+  return num;
+};
 
+function NumbersMatter() {
   return (
     <section className="bg-white text-black py-20 px-6 md:px-20">
       <div className="max-w-7xl mx-auto text-center">
-
-        {/* Heading */}
         <h2 className="text-4xl sm:text-4xl font-bold mb-6 tracking-tight">
-          <span className="text-red-600"> Numbers</span> Matter
+          <span className="text-red-600">Numbers</span> Matter
         </h2>
         <p className="text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-14 font-light text-gray-700">
           Our method of measuring success is to calculate the numbers each time.
         </p>
 
-        {/* Stats Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map(({ label, value, suffix }) => (
             <div
@@ -44,7 +40,7 @@ export default function NumbersMatter() {
                   separator=","
                   enableScrollSpy
                   scrollSpyOnce
-                  formattingFn={label === "Monthly Conversion" ? formatMillions : undefined}
+                  formattingFn={(num) => formatValue(num, label)}
                 >
                   {({ countUpRef }) => (
                     <>
@@ -64,3 +60,6 @@ export default function NumbersMatter() {
     </section>
   );
 }
+
+// ✅ Wrap in memo to avoid unnecessary re-renders
+export default memo(NumbersMatter);
