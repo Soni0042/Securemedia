@@ -74,8 +74,8 @@ export default function AboutSAM() {
             <p className="mt-2 text-gray-600">Years Experience</p>
           </div>
           <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-            <h2 className="text-4xl font-bold text-red-600">∞</h2>
-            <p className="mt-2 text-gray-600">Growth Potential</p>
+            <h2 className="text-4xl font-bold text-red-600">1M+</h2>
+            <p className="mt-2 text-gray-600">Monthly Conversions</p>
           </div>
         </div>
       </section>
