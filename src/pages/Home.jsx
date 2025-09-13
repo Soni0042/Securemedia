@@ -4,7 +4,6 @@ import { FaGamepad, FaShoppingCart, FaPlane, FaHome, FaMoneyBillWave, FaLeaf } f
 import NumbersMatter from "../components/NumbersMatter";
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
-import emailjs from "@emailjs/browser";
 import Clients from "../components/Clients";
 import BannerSlider from "../components/BannerSlider";
 
@@ -60,20 +59,7 @@ export default function Home() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // Send email to owner
-    emailjs.sendForm(
-      "service_jqebicj",
-      "template_wp03vjk",
-      form.current,
-      "cUHFy_7JRJgi-veRT"
-    )
-    .then(() => {
-      setResultMessage(" ✔ Message sent successfully!");
-      e.target.reset();
-    })
-    .catch(() => {
-      setResultMessage("Failed to send the message. Please try again.");
-    });
+   
   };
 
   return (
@@ -377,13 +363,18 @@ export default function Home() {
   </div>
 </section>
 
-   {/* ================= CONTACT FORM ================= */}
-      <section id="contact-form" className="bg-gray-50 py-16 px-6 md:px-20">
-        <div className="max-w-4xl mx-auto">
+   {/* Contact Form Section */}
+      <section id="contact-form" className="py-16">
+        <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
-            Send Us a <span className="text-red-600">Message</span>
+            Send Us a  <span className="text-red-600">Message</span>
           </h2>
-          <form ref={form} onSubmit={sendEmail} className="bg-white p-8 rounded-xl shadow-lg space-y-6">
+          <form
+            action="https://formsubmit.co/support@thesecuremedia.com"
+            method="POST"
+            className="bg-white p-8 rounded-xl shadow-lg space-y-6"
+          >
+            {/* Form fields unchanged */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <InputField label="First Name" placeholder="Enter your first name" name="first_name" />
               <InputField label="Last Name" placeholder="Enter your last name" name="last_name" />
@@ -403,6 +394,11 @@ export default function Home() {
                 className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-red-600"
               />
             </div>
+
+            {/* Optional hidden fields for success redirect & captcha */}
+            <input type="hidden" name="_captcha" value="false" />
+            
+
             <button
               type="submit"
               className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium transition w-full"
@@ -414,7 +410,7 @@ export default function Home() {
             <p className="mt-6 text-center font-semibold text-gray-700">{resultMessage}</p>
           )}
         </div>
-      </section>  
+      </section>
       {/* ================= FOOTER ================= */}
       <Footer />
     </div>

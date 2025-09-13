@@ -73,9 +73,9 @@ export default function Contact() {
         <div className="mt-10 text-center">
           <h4 className="text-lg font-semibold mb-4 text-gray-800">Connect with us</h4>
           <div className="flex justify-center space-x-5">
-            <SocialIcon href="https://www.facebook.com/" icon={<FaFacebookF />} />
-            <SocialIcon href="https://www.linkedin.com/" icon={<FaLinkedinIn />} />
-            <SocialIcon href="https://www.instagram.com/" icon={<FaInstagram />} />
+            <SocialIcon href="https://www.facebook.com/Secureaffiliatemedia" icon={<FaFacebookF />} />
+            <SocialIcon href="https://www.linkedin.com/company/the-secure-media/" icon={<FaLinkedinIn />} />
+            <SocialIcon href="https://www.instagram.com/secureaffiliatemedia/" icon={<FaInstagram />} />
           </div>
         </div>
       </section>
