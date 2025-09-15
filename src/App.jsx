@@ -1,7 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; 
 import Navbar from "./components/Navbar";
-import SchemaMarkup from "./components/Schema";
-
 import Home from "./pages/Home";
 import AboutSAM from "./pages/about/AboutSAM";
 import ContactUs from "./pages/contact/ContactUs";
@@ -20,8 +18,7 @@ import BlogPost from "./pages/BlogPost";
 export default function App() {
   return (
     <Router>
-      {/* Include schema markup site-wide */}
-      <SchemaMarkup />
+      
 
       {/* Navbar on all pages */}
       <Navbar />
