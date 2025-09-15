@@ -13,8 +13,16 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { FaGlobe, FaHandshake, FaMoneyCheckAlt, FaUsers } from "react-icons/fa";
 import { MdInventory, MdTrendingUp, MdGroups } from "react-icons/md";
+import { Helmet } from "react-helmet";
 
 const Affiliate = () => {
+  <Helmet>
+      <title>Skyrocket Revenue with TheSecureMedia Affiliates</title>
+      <meta
+        name="description"
+        content="Supercharge your brand’s growth with TheSecureMedia’s expert affiliate marketing services. Unlock powerful strategies to boost revenue."
+      />
+    </Helmet>
   const navigate = useNavigate();
 
   const steps = [

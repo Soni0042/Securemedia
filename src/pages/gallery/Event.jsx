@@ -1,7 +1,15 @@
 import React from "react";
 import Footer from "../../components/Footer";
+import { Helmet } from "react-helmet";
 
 const Event = () => {
+  <Helmet>
+      <title>Relive Events in TheSecureMedia Gallery</title>
+      <meta
+        name="description"
+        content="Check out TheSecureMedia’s event gallery to relive epic moments. See our vibrant captures and shine with our creative work."
+      />
+    </Helmet>
   // Array of images for global events
   const images = [
     "/event (1).jpeg",

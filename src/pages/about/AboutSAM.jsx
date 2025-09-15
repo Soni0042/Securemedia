@@ -3,8 +3,16 @@ import Footer from "../../components/Footer";
 import { FaGlobe, FaChartLine, FaLightbulb, FaSyncAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 export default function AboutSAM() {
+  <Helmet>
+      <title>Journey to Digital Excellence TheSecureMedia</title>
+      <meta
+        name="description"
+        content="Meet TheSecureMedia team driving your brand forward with passion expertise and secure digital strategies for lasting online impact."
+      />
+    </Helmet>
   const navigate = useNavigate();
   return (
     <div className="bg-white text-gray-800 font-sans flex flex-col min-h-screen">

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 import {
   FaPhoneAlt,
   FaEnvelope,
@@ -12,6 +13,13 @@ import Footer from "../../components/Footer";
 import { motion } from "framer-motion";
 
 export default function Contact() {
+  <Helmet>
+      <title>Contact TheSecureMedia for Digital Solutions Now</title>
+      <meta
+        name="description"
+        content="Reach out to TheSecureMedia for expert digital solutions and media services to grow your brand. Contact us today to start shining."
+      />
+    </Helmet>
   const [resultMessage, setResultMessage] = useState(""); // Optional: you can remove this if not needed
 
   return (

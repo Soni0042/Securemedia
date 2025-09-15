@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 import {
   FaShoppingCart,
   FaYoutube,
@@ -12,6 +13,13 @@ import Footer from "../../components/Footer";
 import { useNavigate } from "react-router-dom";
 
 export default function EcommerceMarketing() {
+  <Helmet>
+      <title>Thrive Online with TheSecureMedia Ecommerce Marketing</title>
+      <meta
+        name="description"
+        content="Grow your shop fast with TheSecureMedia’s ecommerce marketing. Win more sales with simple, smart plans that work."
+      />
+    </Helmet>
    const navigate = useNavigate();
   return (
     <div className="flex flex-col min-h-screen font-sans text-gray-900 bg-gray-50">

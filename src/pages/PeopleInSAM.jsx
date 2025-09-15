@@ -1,5 +1,6 @@
 import React from "react";
 import Footer from "../components/Footer";
+import { Helmet } from "react-helmet";
 
 const teamMembers = [
   { role: "Sales Manager-International & Domestic", image: "/akshit.png" },
@@ -82,6 +83,13 @@ const styles = {
 };
 
 const PeopleInSAM = () => {
+  <Helmet>
+      <title>People in SAM and Their Roles in Software Asset Management</title>
+      <meta
+        name="description"
+        content="Discover the people in SAM, their roles, and responsibilities. Learn how each person contributes to effective software asset management success."
+      />
+    </Helmet>
   const [hoveredIndex, setHoveredIndex] = React.useState(null);
 
   return (

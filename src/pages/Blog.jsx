@@ -1,8 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 export default function Blog() {
+  <Helmet>
+      <title>Digital Tips and Solutions TheSecureMedia Blog</title>
+      <meta
+        name="description"
+        content="Explore TheSecureMedia Blog for expert tips and solutions to your digital and media challenges. Get answers to real user questions now."
+      />
+    </Helmet>
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

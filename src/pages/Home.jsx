@@ -6,11 +6,19 @@ import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 import Clients from "../components/Clients";
 import BannerSlider from "../components/BannerSlider";
+import { Helmet } from "react-helmet";
 
 
 
 
 export default function Home() {
+  <Helmet>
+      <title>Grow Your Brand with Secure Digital Solutions, TheSecureMedia</title>
+      <meta
+        name="description"
+        content="Boost your online presence with innovative digital solutions, expert media services, and secure strategies from TheSecureMedia to stand out."
+      />
+    </Helmet>
   const navigate = useNavigate();
   
   const fadeUp = {

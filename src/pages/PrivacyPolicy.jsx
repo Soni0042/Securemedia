@@ -1,7 +1,15 @@
 import React from "react";
 import Footer from "../components/Footer";
+import { Helmet } from "react-helmet";
 
 const PrivacyPolicy = () => {
+   <Helmet>
+      <title>TheSecureMedia Privacy Policy | How We Protect You</title>
+      <meta
+        name="description"
+        content="Discover how TheSecureMedia keeps your data safe. Our privacy policy is built on trust, transparency, and security to give you complete peace of mind."
+      />
+    </Helmet>
   return (
     <>
       {/* Hero Section */}

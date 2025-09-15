@@ -4,8 +4,16 @@ import { FaUsers, FaClock, FaChartLine, FaEnvelopeOpenText, FaClipboardList, FaP
 import Footer from "../../components/Footer";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 export default function EmailMarketing() {
+  <Helmet>
+      <title>Win Customers with TheSecureMedia Email Marketing</title>
+      <meta
+        name="description"
+        content="Build stronger connections with TheSecureMedia’s email marketing. Engage your audience and grow your brand with smart campaigns."
+      />
+    </Helmet>
   const navigate = useNavigate();
   return (
     <div className="flex flex-col min-h-screen font-sans text-gray-900 bg-gray-50">

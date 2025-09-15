@@ -1,7 +1,15 @@
 import React from "react";
 import Footer from "../../components/Footer";
+import { Helmet } from "react-helmet";
 
 const InHouse = () => {
+  <Helmet>
+      <title>See Creative Work in TheSecureMedia Gallery</title>
+      <meta
+        name="description"
+        content="Explore TheSecureMedia’s in-house gallery to see bold creative projects. Get inspired by our work and shine with us."
+      />
+    </Helmet>
   // Array of 12 images (replace with actual image paths)
   const images = [
     "/inhouse (1).png",
