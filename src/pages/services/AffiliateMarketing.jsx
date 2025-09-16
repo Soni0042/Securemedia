@@ -16,13 +16,7 @@ import { MdInventory, MdTrendingUp, MdGroups } from "react-icons/md";
 import { Helmet } from "react-helmet";
 
 const Affiliate = () => {
-  <Helmet>
-      <title>Skyrocket Revenue with TheSecureMedia Affiliates</title>
-      <meta
-        name="description"
-        content="Supercharge your brand’s growth with TheSecureMedia’s expert affiliate marketing services. Unlock powerful strategies to boost revenue."
-      />
-    </Helmet>
+  
   const navigate = useNavigate();
 
   const steps = [
@@ -66,6 +60,13 @@ const Affiliate = () => {
 
   return (
     <div className="text-white font-sans min-h-screen flex flex-col">
+      <Helmet>
+      <title>Skyrocket Revenue with TheSecureMedia Affiliates</title>
+      <meta
+        name="description"
+        content="Supercharge your brand’s growth with TheSecureMedia’s expert affiliate marketing services. Unlock powerful strategies to boost revenue."
+      />
+    </Helmet>
       
       {/* ================= HERO ================= */}
       <section className="min-h-screen flex items-center px-6 md:px-20 bg-gradient-to-r from-red-600 to-red-800">

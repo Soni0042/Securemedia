@@ -13,17 +13,18 @@ import Footer from "../../components/Footer";
 import { motion } from "framer-motion";
 
 export default function Contact() {
-  <Helmet>
+  
+  const [resultMessage, setResultMessage] = useState(""); // Optional: you can remove this if not needed
+
+  return (
+    <div className="bg-white text-gray-800 font-sans flex flex-col min-h-screen">
+      <Helmet>
       <title>Contact TheSecureMedia for Digital Solutions Now</title>
       <meta
         name="description"
         content="Reach out to TheSecureMedia for expert digital solutions and media services to grow your brand. Contact us today to start shining."
       />
     </Helmet>
-  const [resultMessage, setResultMessage] = useState(""); // Optional: you can remove this if not needed
-
-  return (
-    <div className="bg-white text-gray-800 font-sans flex flex-col min-h-screen">
       {/* Hero, Contact Info Cards, Social Icons etc. unchanged */}
       <section className="relative w-full min-h-screen bg-gradient-to-r from-red-800 to-red-600 text-white flex items-center py-10 md:py-0">
         <div className="max-w-6xl mx-auto px-6 md:px-20 flex flex-col md:grid md:grid-cols-2 items-center gap-10">

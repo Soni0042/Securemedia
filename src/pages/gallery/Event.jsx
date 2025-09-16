@@ -3,13 +3,7 @@ import Footer from "../../components/Footer";
 import { Helmet } from "react-helmet";
 
 const Event = () => {
-  <Helmet>
-      <title>Relive Events in TheSecureMedia Gallery</title>
-      <meta
-        name="description"
-        content="Check out TheSecureMedia’s event gallery to relive epic moments. See our vibrant captures and shine with our creative work."
-      />
-    </Helmet>
+  
   // Array of images for global events
   const images = [
     "/event (1).jpeg",
@@ -29,6 +23,13 @@ const Event = () => {
 
   return (
     <div className="bg-white text-gray-900 font-sans">
+      <Helmet>
+      <title>Relive Events in TheSecureMedia Gallery</title>
+      <meta
+        name="description"
+        content="Check out TheSecureMedia’s event gallery to relive epic moments. See our vibrant captures and shine with our creative work."
+      />
+    </Helmet>
 
       {/* ================= HEADER ================= */}
       <section className="py-16 px-6 md:px-20 text-center">

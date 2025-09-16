@@ -83,17 +83,18 @@ const styles = {
 };
 
 const PeopleInSAM = () => {
-  <Helmet>
+  
+  const [hoveredIndex, setHoveredIndex] = React.useState(null);
+
+  return (
+    <>
+    <Helmet>
       <title>People in SAM and Their Roles in Software Asset Management</title>
       <meta
         name="description"
         content="Discover the people in SAM, their roles, and responsibilities. Learn how each person contributes to effective software asset management success."
       />
     </Helmet>
-  const [hoveredIndex, setHoveredIndex] = React.useState(null);
-
-  return (
-    <>
       <section style={styles.section}>
         <h1 className="text-4xl text-center md:text-5xl mb-4">
           OUR <span className="text-red-600">TEAM</span>

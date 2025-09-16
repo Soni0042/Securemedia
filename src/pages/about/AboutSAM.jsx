@@ -6,16 +6,16 @@ import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 export default function AboutSAM() {
-  <Helmet>
+  const navigate = useNavigate();
+  return (
+    <div className="bg-white text-gray-800 font-sans flex flex-col min-h-screen">
+      <Helmet>
       <title>Journey to Digital Excellence TheSecureMedia</title>
       <meta
         name="description"
         content="Meet TheSecureMedia team driving your brand forward with passion expertise and secure digital strategies for lasting online impact."
       />
     </Helmet>
-  const navigate = useNavigate();
-  return (
-    <div className="bg-white text-gray-800 font-sans flex flex-col min-h-screen">
 
       {/* ================= HERO (Full-screen landing page) ================= */}
       <section className="relative w-full h-screen bg-gradient-to-r from-red-600 to-red-800 text-white flex items-center">

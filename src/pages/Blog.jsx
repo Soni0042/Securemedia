@@ -4,13 +4,7 @@ import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
 
 export default function Blog() {
-  <Helmet>
-      <title>Digital Tips and Solutions TheSecureMedia Blog</title>
-      <meta
-        name="description"
-        content="Explore TheSecureMedia Blog for expert tips and solutions to your digital and media challenges. Get answers to real user questions now."
-      />
-    </Helmet>
+  
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -58,6 +52,14 @@ export default function Blog() {
   }
 
   return (
+    <>
+      <Helmet>
+        <title>Digital Tips and Solutions TheSecureMedia Blog</title>
+        <meta
+          name="description"
+          content="Explore TheSecureMedia Blog for expert tips and solutions to your digital and media challenges. Get answers to real user questions now."
+        />
+      </Helmet>
     <main className="max-w-5xl mx-auto px-4 py-12 font-sans">
       <h1 className="text-3xl md:text-4xl font-bold mb-10 text-center text-gray-900 tracking-tight">
         Our Blog
@@ -103,7 +105,7 @@ export default function Blog() {
                     className="text-gray-700 mb-5 flex-grow overflow-hidden line-clamp-4 text-sm"
                     dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
                   />
-                  <div className="flex justify-between items-center text-xs text-gray-500 mb-5">
+                  {/* <div className="flex justify-between items-center text-xs text-gray-500 mb-5">
                     <time dateTime={post.date}>
                       {new Date(post.date).toLocaleDateString("en-US", {
                         year: "numeric",
@@ -114,7 +116,7 @@ export default function Blog() {
                     {post.yoast_head_json?.author && (
                       <span>By {post.yoast_head_json.author}</span>
                     )}
-                  </div>
+                  </div> */}
                   <Link
                     to={`/blog/${post.id}`}
                     className="mt-auto inline-block rounded-full bg-red-600 px-5 py-2 text-center font-medium text-white transition-colors hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 text-sm"
@@ -129,5 +131,6 @@ export default function Blog() {
         </section>
       )}
     </main>
+    </>
   );
 }

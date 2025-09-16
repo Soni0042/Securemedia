@@ -47,12 +47,12 @@ export default function BlogPost() {
         className="text-4xl font-bold mb-4"
         dangerouslySetInnerHTML={{ __html: post.title.rendered }}
       />
-      <time
+      {/* <time
         className="block text-gray-500 mb-6"
         dateTime={post.date}
       >
         {new Date(post.date).toLocaleDateString()}
-      </time>
+      </time> */}
       <div
         className="prose max-w-none"
         dangerouslySetInnerHTML={{ __html: post.content.rendered }}

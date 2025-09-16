@@ -7,17 +7,17 @@ import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 export default function EmailMarketing() {
-  <Helmet>
+
+  const navigate = useNavigate();
+  return (
+    <div className="flex flex-col min-h-screen font-sans text-gray-900 bg-gray-50">
+      <Helmet>
       <title>Win Customers with TheSecureMedia Email Marketing</title>
       <meta
         name="description"
         content="Build stronger connections with TheSecureMedia’s email marketing. Engage your audience and grow your brand with smart campaigns."
       />
     </Helmet>
-  const navigate = useNavigate();
-  return (
-    <div className="flex flex-col min-h-screen font-sans text-gray-900 bg-gray-50">
-      
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-red-600 to-red-800 text-white py-32 px-6">
         <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-start justify-between gap-10">

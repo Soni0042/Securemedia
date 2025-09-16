@@ -13,16 +13,17 @@ import Footer from "../../components/Footer";
 import { useNavigate } from "react-router-dom";
 
 export default function EcommerceMarketing() {
-  <Helmet>
+  
+   const navigate = useNavigate();
+  return (
+    <div className="flex flex-col min-h-screen font-sans text-gray-900 bg-gray-50">
+      <Helmet>
       <title>Thrive Online with TheSecureMedia Ecommerce Marketing</title>
       <meta
         name="description"
         content="Grow your shop fast with TheSecureMedia’s ecommerce marketing. Win more sales with simple, smart plans that work."
       />
     </Helmet>
-   const navigate = useNavigate();
-  return (
-    <div className="flex flex-col min-h-screen font-sans text-gray-900 bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-red-600 to-red-800 text-white min-h-screen flex items-center px-6">
         <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

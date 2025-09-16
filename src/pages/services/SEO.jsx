@@ -6,17 +6,17 @@ import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 export default function SEOService() {
-   <Helmet>
+   
+   const navigate = useNavigate();
+  return (
+    <div className="flex flex-col min-h-screen font-sans text-gray-900 bg-gray-50">
+<Helmet>
       <title>Shine Online with TheSecureMedia SEO Services</title>
       <meta
         name="description"
         content="Win the search game with TheSecureMedia’s SEO services. Use smart strategies to shine online and grow your brand fast."
       />
     </Helmet>
-   const navigate = useNavigate();
-  return (
-    <div className="flex flex-col min-h-screen font-sans text-gray-900 bg-gray-50">
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-red-600 to-red-800 text-white py-20 px-6">
         <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10">

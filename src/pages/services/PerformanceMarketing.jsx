@@ -6,16 +6,17 @@ import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 export default function PerformanceMarketing() {
-  <Helmet>
+  
+  const navigate = useNavigate();
+  return (
+    <div className="bg-gradient-to-r from-red-600 to-red-800 text-white font-sans min-h-screen flex flex-col">
+      <Helmet>
       <title>Win Big with TheSecureMedia Performance Marketing</title>
       <meta
         name="description"
         content="Thrive online with TheSecureMedia’s performance marketing. Tap into smart, data-driven strategies to grow your brand and win big."
       />
     </Helmet>
-  const navigate = useNavigate();
-  return (
-    <div className="bg-gradient-to-r from-red-600 to-red-800 text-white font-sans min-h-screen flex flex-col">
 
       {/* ================= HERO SECTION ================= */}
       <main className="flex-grow">

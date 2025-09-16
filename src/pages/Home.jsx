@@ -12,13 +12,6 @@ import { Helmet } from "react-helmet";
 
 
 export default function Home() {
-  <Helmet>
-      <title>Grow Your Brand with Secure Digital Solutions, TheSecureMedia</title>
-      <meta
-        name="description"
-        content="Boost your online presence with innovative digital solutions, expert media services, and secure strategies from TheSecureMedia to stand out."
-      />
-    </Helmet>
   const navigate = useNavigate();
   
   const fadeUp = {
@@ -73,6 +66,13 @@ export default function Home() {
 
   return (
     <div className="bg-white text-black font-sans min-h-screen leading-relaxed">
+      <Helmet>
+        <title>Grow Your Brand with Secure Digital Solutions|TheSecureMedia</title>
+        <meta
+          name="description"
+          content="Boost your online presence with innovative digital solutions, expert media services, and secure strategies from TheSecureMedia to stand out."
+        />
+      </Helmet>
     {/* Hero Section */}
 <section className="flex flex-col md:flex-row items-start justify-between max-w-7xl mx-auto py-25 px-6 md:px-12 gap-12">
   {/* Left: Text Content */}
