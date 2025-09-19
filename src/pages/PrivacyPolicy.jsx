@@ -12,6 +12,7 @@ const PrivacyPolicy = () => {
         name="description"
         content="Discover how TheSecureMedia keeps your data safe. Our privacy policy is built on trust, transparency, and security to give you complete peace of mind."
       />
+      <link rel="canonical" href="https://thesecuremedia.com/privacy-policy" />
     </Helmet>
       {/* Hero Section */}
       <section className=" text-black-600 py-16 text-center">

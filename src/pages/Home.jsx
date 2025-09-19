@@ -72,6 +72,7 @@ export default function Home() {
           name="description"
           content="Boost your online presence with innovative digital solutions, expert media services, and secure strategies from TheSecureMedia to stand out."
         />
+        <link rel="canonical" href="https://thesecuremedia.com" />
       </Helmet>
     {/* Hero Section */}
 <section className="flex flex-col md:flex-row items-start justify-between max-w-7xl mx-auto py-25 px-6 md:px-12 gap-12">

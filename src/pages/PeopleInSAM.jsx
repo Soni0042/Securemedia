@@ -94,6 +94,7 @@ const PeopleInSAM = () => {
         name="description"
         content="Discover the people in SAM, their roles, and responsibilities. Learn how each person contributes to effective software asset management success."
       />
+      <link rel="canonical" href="https://thesecuremedia.com/people-in-sam" />
     </Helmet>
       <section style={styles.section}>
         <h1 className="text-4xl text-center md:text-5xl mb-4">

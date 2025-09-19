@@ -31,6 +31,8 @@ const InHouse = () => {
         name="description"
         content="Explore TheSecureMedia’s in-house gallery to see bold creative projects. Get inspired by our work and shine with us."
       />
+            <link rel="canonical" href="https://thesecuremedia.com/gallery/in-house" />
+
     </Helmet>
       
       {/* ================= HEADER ================= */}

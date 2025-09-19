@@ -16,6 +16,8 @@ export default function PerformanceMarketing() {
         name="description"
         content="Thrive online with TheSecureMedia’s performance marketing. Tap into smart, data-driven strategies to grow your brand and win big."
       />
+            <link rel="canonical" href="https://thesecuremedia.com/services/performance-marketing" />
+
     </Helmet>
 
       {/* ================= HERO SECTION ================= */}

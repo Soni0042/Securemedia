@@ -23,6 +23,8 @@ export default function EcommerceMarketing() {
         name="description"
         content="Grow your shop fast with TheSecureMedia’s ecommerce marketing. Win more sales with simple, smart plans that work."
       />
+            <link rel="canonical" href="https://thesecuremedia.com/services/ecommerce-marketing" />
+
     </Helmet>
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-red-600 to-red-800 text-white min-h-screen flex items-center px-6">

@@ -17,6 +17,8 @@ export default function EmailMarketing() {
         name="description"
         content="Build stronger connections with TheSecureMedia’s email marketing. Engage your audience and grow your brand with smart campaigns."
       />
+            <link rel="canonical" href="https://thesecuremedia.com/services/email-marketing" />
+
     </Helmet>
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-red-600 to-red-800 text-white py-32 px-6">

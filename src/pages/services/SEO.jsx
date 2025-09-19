@@ -16,6 +16,8 @@ export default function SEOService() {
         name="description"
         content="Win the search game with TheSecureMedia’s SEO services. Use smart strategies to shine online and grow your brand fast."
       />
+        <link rel="canonical" href="https://thesecuremedia.com/services/seo" />
+
     </Helmet>
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-red-600 to-red-800 text-white py-20 px-6">

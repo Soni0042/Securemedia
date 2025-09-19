@@ -59,6 +59,7 @@ export default function Blog() {
           name="description"
           content="Explore TheSecureMedia Blog for expert tips and solutions to your digital and media challenges. Get answers to real user questions now."
         />
+        <link rel="canonical" href="https://thesecuremedia.com/blog" />
       </Helmet>
     <main className="max-w-5xl mx-auto px-4 py-12 font-sans">
       <h1 className="text-3xl md:text-4xl font-bold mb-10 text-center text-gray-900 tracking-tight">

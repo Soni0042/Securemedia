@@ -15,6 +15,8 @@ export default function AboutSAM() {
         name="description"
         content="Meet TheSecureMedia team driving your brand forward with passion expertise and secure digital strategies for lasting online impact."
       />
+            <link rel="canonical" href="https://thesecuremedia.com/about-us" />
+
     </Helmet>
 
       {/* ================= HERO (Full-screen landing page) ================= */}

@@ -29,6 +29,8 @@ const Event = () => {
         name="description"
         content="Check out TheSecureMedia’s event gallery to relive epic moments. See our vibrant captures and shine with our creative work."
       />
+            <link rel="canonical" href="https://thesecuremedia.com/gallery/event" />
+
     </Helmet>
 
       {/* ================= HEADER ================= */}

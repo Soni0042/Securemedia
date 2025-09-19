@@ -66,6 +66,8 @@ const Affiliate = () => {
         name="description"
         content="Supercharge your brand’s growth with TheSecureMedia’s expert affiliate marketing services. Unlock powerful strategies to boost revenue."
       />
+            <link rel="canonical" href="https://thesecuremedia.com/services/affiliate-marketing" />
+
     </Helmet>
       
       {/* ================= HERO ================= */}

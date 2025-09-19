@@ -24,6 +24,8 @@ export default function Contact() {
         name="description"
         content="Reach out to TheSecureMedia for expert digital solutions and media services to grow your brand. Contact us today to start shining."
       />
+            <link rel="canonical" href="https://thesecuremedia.com/contact-us" />
+
     </Helmet>
       {/* Hero, Contact Info Cards, Social Icons etc. unchanged */}
       <section className="relative w-full min-h-screen bg-gradient-to-r from-red-800 to-red-600 text-white flex items-center py-10 md:py-0">
